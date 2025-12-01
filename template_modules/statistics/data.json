@@ -1,0 +1,115 @@
+{
+  "statistics": {
+    "sessions": [
+      {
+        "date": "01.12.2025",
+        "start": 1764612979681,
+        "end": 1764613577261
+      },
+      {
+        "date": "01.12.2025",
+        "start": 1764613602781,
+        "end": 1764623727321
+      },
+      {
+        "date": "02.12.2025",
+        "start": 1764623737816,
+        "end": 1764624085725
+      },
+      {
+        "date": "02.12.2025",
+        "start": 1764624099167,
+        "end": 1764624292595
+      },
+      {
+        "date": "02.12.2025",
+        "start": 1764624380597,
+        "end": 1764624453279
+      },
+      {
+        "date": "02.12.2025",
+        "start": 1764624462187,
+        "end": 1764625640343
+      },
+      {
+        "date": "02.12.2025",
+        "start": 1764625653684,
+        "end": 1764626128451
+      },
+      {
+        "date": "02.12.2025",
+        "start": 1764626142626,
+        "end": 1764626292048
+      },
+      {
+        "date": "02.12.2025",
+        "start": 1764626388296,
+        "end": 1764626875947
+      },
+      {
+        "date": "02.12.2025",
+        "start": 1764626885008,
+        "end": 1764627384287
+      },
+      {
+        "date": "02.12.2025",
+        "start": 1764627394753,
+        "end": 1764627412182
+      }
+    ],
+    "files": [
+      "favicon.ico",
+      "favicon.png",
+      "favicon.png.~tmp",
+      "tour.svg",
+      "time.svg",
+      "support.svg",
+      "show_eye.svg",
+      "profile.svg",
+      "plus.svg",
+      "phone.svg",
+      "one day.svg",
+      "mountain_bike.svg",
+      "minus.svg",
+      "map.svg",
+      "mail.svg",
+      "loop.svg",
+      "long_back_arrow.svg",
+      "logout.svg",
+      "logo.svg",
+      "location.svg",
+      "language.svg",
+      "key.svg",
+      "inst.svg",
+      "hidden_eye.svg",
+      "guide.svg",
+      "fees.svg",
+      "facebook.svg",
+      "euro.svg",
+      "ended.svg",
+      "earth.svg",
+      "duration.svg",
+      "driver.svg",
+      "down_arrow.svg",
+      "done.svg",
+      "discount.svg",
+      "companion.svg",
+      "car.svg",
+      "calender.svg",
+      "bus.svg",
+      "best_price.svg",
+      "any_location.svg",
+      "iconfont.svg",
+      "iconfont.ttf",
+      "iconfont.woff2",
+      "iconfont.html",
+      "one_day.svg",
+      "right_arrow.svg",
+      "Vector.svg",
+      "Vector (Stroke).svg",
+      "index.html",
+      "home.html",
+      "settings.scss"
+    ]
+  }
+}

@@ -1,0 +1,134 @@
+@font-face { 
+	font-family: "iconfont"; 
+	font-display: swap;
+	src: url("D://WEB/FULL/front-end/_java-sript/projects/seites/travel-agency/src/assets/svgicons/preview/iconfont.woff2?ae273f00383033bfc41b4aa515b4f0c3") format("woff2"); 
+} 
+[class*="--icon-"]::before{
+	font-family: iconfont; 
+}
+	[class*="--icon-water"]::before { 
+		content: "\f101"; 
+	} 
+	[class*="--icon-upcoming"]::before { 
+		content: "\f102"; 
+	} 
+	[class*="--icon-twitter"]::before { 
+		content: "\f103"; 
+	} 
+	[class*="--icon-tour"]::before { 
+		content: "\f104"; 
+	} 
+	[class*="--icon-time"]::before { 
+		content: "\f105"; 
+	} 
+	[class*="--icon-ticket"]::before { 
+		content: "\f106"; 
+	} 
+	[class*="--icon-support"]::before { 
+		content: "\f107"; 
+	} 
+	[class*="--icon-show_eye"]::before { 
+		content: "\f108"; 
+	} 
+	[class*="--icon-right_arrow"]::before { 
+		content: "\f109"; 
+	} 
+	[class*="--icon-plus"]::before { 
+		content: "\f10a"; 
+	} 
+	[class*="--icon-phone"]::before { 
+		content: "\f10b"; 
+	} 
+	[class*="--icon-people"]::before { 
+		content: "\f10c"; 
+	} 
+	[class*="--icon-one_day"]::before { 
+		content: "\f10d"; 
+	} 
+	[class*="--icon-mountain_bike"]::before { 
+		content: "\f10e"; 
+	} 
+	[class*="--icon-minus"]::before { 
+		content: "\f10f"; 
+	} 
+	[class*="--icon-map"]::before { 
+		content: "\f110"; 
+	} 
+	[class*="--icon-mail"]::before { 
+		content: "\f111"; 
+	} 
+	[class*="--icon-loop"]::before { 
+		content: "\f112"; 
+	} 
+	[class*="--icon-long_back_arrow"]::before { 
+		content: "\f113"; 
+	} 
+	[class*="--icon-logout"]::before { 
+		content: "\f114"; 
+	} 
+	[class*="--icon-location"]::before { 
+		content: "\f115"; 
+	} 
+	[class*="--icon-language"]::before { 
+		content: "\f116"; 
+	} 
+	[class*="--icon-key"]::before { 
+		content: "\f117"; 
+	} 
+	[class*="--icon-inst"]::before { 
+		content: "\f118"; 
+	} 
+	[class*="--icon-hidden_eye"]::before { 
+		content: "\f119"; 
+	} 
+	[class*="--icon-guide"]::before { 
+		content: "\f11a"; 
+	} 
+	[class*="--icon-facebook"]::before { 
+		content: "\f11b"; 
+	} 
+	[class*="--icon-experience"]::before { 
+		content: "\f11c"; 
+	} 
+	[class*="--icon-euro"]::before { 
+		content: "\f11d"; 
+	} 
+	[class*="--icon-ended"]::before { 
+		content: "\f11e"; 
+	} 
+	[class*="--icon-earth"]::before { 
+		content: "\f11f"; 
+	} 
+	[class*="--icon-duration"]::before { 
+		content: "\f120"; 
+	} 
+	[class*="--icon-driver"]::before { 
+		content: "\f121"; 
+	} 
+	[class*="--icon-down_arrow"]::before { 
+		content: "\f122"; 
+	} 
+	[class*="--icon-done"]::before { 
+		content: "\f123"; 
+	} 
+	[class*="--icon-discount"]::before { 
+		content: "\f124"; 
+	} 
+	[class*="--icon-companion"]::before { 
+		content: "\f125"; 
+	} 
+	[class*="--icon-cmplete_package"]::before { 
+		content: "\f126"; 
+	} 
+	[class*="--icon-car"]::before { 
+		content: "\f127"; 
+	} 
+	[class*="--icon-bus"]::before { 
+		content: "\f128"; 
+	} 
+	[class*="--icon-best_price"]::before { 
+		content: "\f129"; 
+	} 
+	[class*="--icon-any_location"]::before { 
+		content: "\f12a"; 
+	} 
