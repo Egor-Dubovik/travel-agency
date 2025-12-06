@@ -35,7 +35,14 @@
 			<include src="@components/forms/select/select.html"></include>
 		</div>
 		<div class="components__item">
-			<include src="@components/custom/productcard/productcard.html"></include>
+			<include src="@components/custom/productcard/productcard.html" locals='{
+				"title": "Siena and Surroundings",
+				"description": "Visit the beautiful Siena and the cities that surround it to experience elit amet architecto recusandae quaerat, fuga!",
+				"img": "@img/tour-card/SienaSurroundings.jpg",
+				"people": "5-10",
+				"coast": "34"
+			}'>
+			</include>
 		</div>
 		<div class="components__item">
 			<include src="@components/custom/shopproductcard/shopproductcard.html"></include>
