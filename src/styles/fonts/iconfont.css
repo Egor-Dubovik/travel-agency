@@ -1,7 +1,7 @@
 @font-face { 
 	font-family: "iconfont"; 
 	font-display: swap;
-	src: url("D://WEB/FULL/front-end/_java-sript/projects/seites/travel-agency/src/assets/svgicons/preview/iconfont.woff2?ae273f00383033bfc41b4aa515b4f0c3") format("woff2"); 
+	src: url("D://WEB/FULL/front-end/_java-sript/projects/seites/travel-agency/src/assets/svgicons/preview/iconfont.woff2?eb5b558a1c1ebf3cdf1b4b239816cffd") format("woff2"); 
 } 
 [class*="--icon-"]::before{
 	font-family: iconfont; 
@@ -123,12 +123,15 @@
 	[class*="--icon-car"]::before { 
 		content: "\f127"; 
 	} 
-	[class*="--icon-bus"]::before { 
+	[class*="--icon-calender"]::before { 
 		content: "\f128"; 
 	} 
-	[class*="--icon-best_price"]::before { 
+	[class*="--icon-bus"]::before { 
 		content: "\f129"; 
 	} 
-	[class*="--icon-any_location"]::before { 
+	[class*="--icon-best_price"]::before { 
 		content: "\f12a"; 
+	} 
+	[class*="--icon-any_location"]::before { 
+		content: "\f12b"; 
 	} 

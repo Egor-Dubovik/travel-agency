@@ -59,7 +59,22 @@
       {
         "date": "06.12.2025",
         "start": 1765026703915,
-        "end": 1765026703915
+        "end": 1765042948589
+      },
+      {
+        "date": "06.12.2025",
+        "start": 1765046771058,
+        "end": 1765048568321
+      },
+      {
+        "date": "06.12.2025",
+        "start": 1765048593556,
+        "end": 1765049330379
+      },
+      {
+        "date": "06.12.2025",
+        "start": 1765049676144,
+        "end": 1765049676144
       }
     ],
     "files": [
@@ -126,7 +141,9 @@
       "button.scss",
       "variables.css",
       "button.html",
-      "quantity.scss"
+      "quantity.scss",
+      "productcard.html",
+      "productcard.scss"
     ]
   }
 }
