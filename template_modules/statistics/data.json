@@ -152,7 +152,9 @@
       "datepicker.js",
       "datepicker.html",
       "datepicker.scss",
-      "_lang.json"
+      "_lang.json",
+      "select.scss",
+      "select.html"
     ]
   }
 }
