@@ -1,24 +1,22 @@
 // Підключення модуля
 import datepicker from 'js-datepicker';
 
-import langs from "./_lang.json"
-import './datepicker.scss'
+import langs from './_lang.json';
+import './datepicker.scss';
 
 if (document.querySelector('[data-fls-datepicker]')) {
-	const LANG = 'ua' // en
+	const LANG = 'en'; // ua
 	const datePicker = datepicker('[data-fls-datepicker]', {
 		customDays: langs[LANG].week,
 		customMonths: langs[LANG].month,
 		overlayButton: langs[LANG].button,
 		overlayPlaceholder: langs[LANG].year,
-		startDay: 1,
+		startDay: 0,
 		formatter: (input, date, instance) => {
-			const value = date.toLocaleDateString()
-			input.value = value
+			const value = date.toLocaleDateString();
+			input.value = value;
 		},
-		onSelect: function (input, instance, date) {
-
-		}
+		onSelect: function (input, instance, date) {},
 	});
 	window.flsDatepicker = datePicker;
 }

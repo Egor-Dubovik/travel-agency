@@ -148,7 +148,11 @@
       "shopproductcard.scss",
       "taxi.jpg.~tmp",
       "taxi.jpg",
-      "shopproductcard.js"
+      "shopproductcard.js",
+      "datepicker.js",
+      "datepicker.html",
+      "datepicker.scss",
+      "_lang.json"
     ]
   }
 }
