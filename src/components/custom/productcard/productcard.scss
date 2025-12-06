@@ -7,6 +7,7 @@
 		height: 100%;
 		object-fit: cover;
 		border-radius: 24px;
+		margin-bottom: 16px;
 	}
 	// .productcard__content
 	&__content {
@@ -18,6 +19,14 @@
 	&__title {
 		font-weight: 700;
 		font-size: 24px;
+		a {
+			@media (any-hover: hover) and (any-pointer: fine) {
+				&:hover {
+					text-decoration: underline;
+					text-underline-offset: 2px;
+				}
+			}
+		}
 	}
 	// .productcard__coast
 	&__coast {

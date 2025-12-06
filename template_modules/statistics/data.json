@@ -143,7 +143,12 @@
       "button.html",
       "quantity.scss",
       "productcard.html",
-      "productcard.scss"
+      "productcard.scss",
+      "shopproductcard.html",
+      "shopproductcard.scss",
+      "taxi.jpg.~tmp",
+      "taxi.jpg",
+      "shopproductcard.js"
     ]
   }
 }
