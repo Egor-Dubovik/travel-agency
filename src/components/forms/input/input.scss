@@ -1,25 +1,48 @@
 //<INPUT>
 // Сніппет (HTML): inp
-input[type="text"],
-input[type="email"],
-input[type="tel"],
+
+input[type='text'],
+input[type='email'],
+input[type='tel'],
 textarea {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
 }
 .input {
-	border-radius: 0 !important;
 	width: 100%;
 	display: block;
-	padding: 10px;
-	border: 1px solid #eee;
 	caret-color: inherit;
+	border: 1px solid rgba(51, 51, 51, 0.2);
+	border-radius: 8px;
+	padding: 14px 24px;
+	height: 50px;
+	background: #fff;
+	font-size: 16px;
+	transition: border-color 0.5s;
+
+	@media (max-width: toEm($mobileSmall)) {
+		padding: 8px 14px;
+	}
+
 	&.--form-focus {
+		outline: 1px solid $primary;
 	}
 	&.--form-error {
+		border: 1px solid $errorColor;
 	}
 }
+
+[data-fls-form-error] {
+	position: absolute;
+	bottom: -15px;
+	left: 0;
+	font-size: 12px;
+	color: $errorColor;
+	opacity: 0;
+	animation: fadeIn 0.5s ease forwards;
+}
+
 .input[placeholder]:not([data-fls-placeholder-nohiden]) {
 	&::placeholder {
 		transition: opacity 0.3s;
@@ -28,7 +51,41 @@ textarea {
 		opacity: 0;
 	}
 }
+
 textarea.input {
 	resize: vertical;
 	padding: 0px 0px;
+}
+
+[data-fls-input-viewpass] {
+	&::after,
+	&::before {
+		position: absolute;
+		top: 50%;
+		right: 14px;
+		font-family: iconfont;
+		font-size: 24px;
+		color: #bfbfbf;
+		translate: 0% -50%;
+	}
+}
+
+[data-fls-input-viewpass] {
+	&::after {
+		content: '\f119';
+		opacity: 1;
+	}
+	&::before {
+		content: '\f108';
+		opacity: 0;
+	}
+}
+
+[data-fls-input-viewpass].--viewpass-active {
+	&::after {
+		opacity: 0;
+	}
+	&::before {
+		opacity: 1;
+	}
 }

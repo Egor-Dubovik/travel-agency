@@ -1,7 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
-	<include src="@components/layout/head/head.html" locals='{
+<include src="@components/layout/head/head.html" locals='{
 		"title":"Розробка компонентів", 
 		"preloader": {
 			"enable":"false",
@@ -10,23 +9,25 @@
 		"keywords":"", 
 		"description":""
 		}'>
-	</include>
-	<style>
-		.components{
-			padding-block: 50px;
-			display: flex;
-			flex-direction: column;
-			gap: 30px;
-		}
-	</style>
-	<body>
-		<div class="components">
-			<div class="components__container">
-				<div class="components__item">
+</include>
+<style>
+	.components {
+		padding-block: 50px;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+</style>
 
-				</div>
+<body>
+	<div class="components">
+		<div class="components__container">
+			<div class="components__item">
+				<include src="@components/forms/form/form.html"></include>
 			</div>
 		</div>
-	</body>
-	<script type="module" src="@js/app.js"></script>
+	</div>
+</body>
+<script type="module" src="@js/app.js"></script>
+
 </html>

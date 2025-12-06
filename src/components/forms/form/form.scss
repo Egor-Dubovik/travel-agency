@@ -1,0 +1,85 @@
+.form {
+	border-radius: 24px;
+	padding: 40px 59px;
+	max-width: 488px;
+	width: 100%;
+	box-shadow: 0 4px 20px 0 rgba(255, 255, 255, 0.25);
+	background: #fff;
+
+	> * {
+		margin-bottom: 20px;
+	}
+	> *:last-child {
+		margin-bottom: 0;
+	}
+
+	@media (max-width: toEm($mobileSmall)) {
+		padding: 30px 15px;
+	}
+
+	&__icon {
+		margin: 0 auto;
+		width: 50px;
+		height: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		border-radius: 100%;
+		background-color: #fddcb3;
+		margin-bottom: 24px;
+		&::before {
+			color: $primary;
+		}
+	}
+
+	.button {
+		width: 100%;
+	}
+}
+
+.form-heading {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	gap: 10px;
+
+	&__title {
+		font-weight: 700;
+		font-size: 32px;
+	}
+
+	&__close-btn {
+		&::before {
+			font-weight: 900;
+			transform: rotate(-45deg);
+			font-size: 26px;
+			opacity: 0.6;
+			transition: opacity 0.3s;
+		}
+
+		@media (any-hover: hover) and (any-pointer: fine) {
+			&:hover {
+				&::before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+.input-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	.form-field {
+		position: relative;
+		display: flex;
+	}
+
+	span {
+		font-weight: 600;
+		opacity: 0.6;
+	}
+}

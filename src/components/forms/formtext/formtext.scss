@@ -1,0 +1,17 @@
+[data-fls-formtext] {
+	font-size: 16px;
+	text-align: center;
+
+	a {
+		font-weight: 600;
+		color: #fa8b02;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	@media (max-width: toEm($mobileSmall)) {
+		font-size: 14px;
+	}
+}
