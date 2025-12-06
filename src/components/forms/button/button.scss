@@ -8,19 +8,67 @@
 	background-color: #fa8b02;
 	font-size: 20px;
 	font-weight: 600;
-	color: #fff;
 	text-align: center;
+	color: #fff;
 	border: 1px solid;
+	border-color: rgba(255, 255, 255, 0);
 	transition: all 0.3s;
 
-	@media (any-hover: hover) {
+	@media (any-hover: hover) and (any-pointer: fine) {
 		&:hover {
 			border-color: #fa8b02;
-			background-color: #fff;
+			background-color: rgba(255, 255, 255, 0);
 			color: #fa8b02;
 		}
 	}
+
+	&--outline {
+		border-color: #fff;
+		background-color: rgba(255, 255, 255, 0);
+		color: #fff;
+
+		@media (any-hover: hover) and (any-pointer: fine) {
+			&:hover {
+				background-color: #fa8b02;
+				color: #fff;
+				border-color: #fa8b02;
+			}
+		}
+	}
+
+	&--searcher {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 12px;
+		width: 80px;
+		height: 80px;
+		padding: 24px;
+
+		@media (max-width: toEm($tablet)) {
+			width: 60px;
+			height: 60px;
+		}
+		@media (max-width: toEm($mobile)) {
+			width: 40px;
+			height: 40px;
+			padding: 18px;
+			&::before {
+				font-size: 16px;
+			}
+		}
+	}
+
 	&--fw {
 		width: 100%;
 	}
+}
+
+.button-text {
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+	gap: 10px;
+	font-weight: 600;
+	text-align: center;
 }

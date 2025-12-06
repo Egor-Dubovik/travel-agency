@@ -124,7 +124,9 @@
       "style.scss",
       "checkbox.scss",
       "button.scss",
-      "variables.css"
+      "variables.css",
+      "button.html",
+      "quantity.scss"
     ]
   }
 }
