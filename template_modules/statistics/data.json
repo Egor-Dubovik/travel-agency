@@ -74,7 +74,22 @@
       {
         "date": "06.12.2025",
         "start": 1765049676144,
-        "end": 1765049676144
+        "end": 1765062043022
+      },
+      {
+        "date": "07.12.2025",
+        "start": 1765117173375,
+        "end": 1765117985933
+      },
+      {
+        "date": "07.12.2025",
+        "start": 1765117995898,
+        "end": 1765127074478
+      },
+      {
+        "date": "07.12.2025",
+        "start": 1765128722941,
+        "end": 1765128722941
       }
     ],
     "files": [
@@ -154,7 +169,13 @@
       "datepicker.scss",
       "_lang.json",
       "select.scss",
-      "select.html"
+      "select.html",
+      "menu.html",
+      "header.html",
+      "menu.json",
+      "menu.scss",
+      "header.scss",
+      "home.scss"
     ]
   }
 }

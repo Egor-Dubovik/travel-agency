@@ -1,5 +1,78 @@
 .header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 0;
+	@media (max-width: toEm($mobile)) {
+		padding: 10px 0;
+	}
 	// .header__container
 	&__container {
+		display: flex;
+		align-items: center;
+		gap: 30px;
+		@media (min-width: toEm($tablet)) {
+			justify-content: space-between;
+		}
+	}
+	&__logo-link {
+		@media (max-width: toEm($tablet)) {
+			margin-right: auto;
+		}
+	}
+	// .header__logo
+	&__logo {
+		position: relative;
+		z-index: 1;
+		aspect-ratio: 133 / 130;
+		width: 100%;
+		max-width: 133px;
+		flex: 0 0 133px;
+		height: 100%;
+		object-fit: cover;
+		@media (max-width: toEm(1200)) {
+			max-width: 100px;
+			flex: 0 0 100px;
+		}
+		@media (max-width: toEm($mobile)) {
+			max-width: 75px;
+			flex: 0 0 75px;
+		}
+	}
+	// .header__menu
+	&__menu {
+		@media (max-width: toEm($tablet)) {
+			order: 3;
+		}
+	}
+	// .header__buttons
+	&__buttons {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+		gap: 22px;
+
+		:first-child {
+			flex: 0 0 46px;
+		}
+	}
+	// .header__button
+	&__button {
+		color: #fff;
+		transition: all 0.5s;
+		@media (any-hover: hover) and (any-pointer: fine) {
+			&:hover {
+				color: $primary;
+			}
+		}
+	}
+}
+
+.button-text.header__button,
+.button.header__button {
+	@media (max-width: toEm(600)) {
+		display: none;
 	}
 }

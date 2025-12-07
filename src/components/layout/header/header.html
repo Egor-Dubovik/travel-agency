@@ -1,5 +1,15 @@
 <header data-fls-header class="header">
 	<div class="header__container">
-		<!-- <include src="@components/layout/menu/menu.html" locals='{"active":"[[active]]"}'></include> -->
+		<a href="./" class="header__logo-link"><img src="@img/icons/logo.png" alt="logo" class='header__logo'></a>
+		<include src="@components/layout/menu/menu.html" locals='{"active":"[[active]]"}'></include>
+		<div class="header__buttons">
+			<select data-fls-select name="form[]" data-fls-select-modif="form" class='header__lang-switcher select--switcher select--light-font'>
+				<option value="eng" selected>En</option>
+				<option value="pl">Pl</option>
+				<option value="ru">Ru</option>
+			</select>
+			<a href='#' data-fls-button type="button" class="header__button button-text">Login</a>
+			<a href='#' data-fls-button type="button" class="header__button button">Sign Up</a>
+		</div>
 	</div>
 </header>
