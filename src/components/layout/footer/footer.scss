@@ -1,5 +1,198 @@
 .footer {
+	background-color: $mainColor;
+	padding: 40px 0;
+	@media (max-width: toEm($tablet)) {
+		padding: 20px 0;
+	}
+
+	@media (max-width: toEm($mobile)) {
+		padding: 20px 0;
+	}
 	// .footer__container
 	&__container {
+	}
+	&__head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 60px;
+		margin-bottom: 33px;
+		@media (max-width: toEm($tablet)) {
+			margin-bottom: 20px;
+		}
+		@media (max-width: toEm($mobileSmall)) {
+			flex-direction: column;
+			gap: 30px;
+			text-align: center;
+		}
+	}
+	// .footer__logo
+	&__logo {
+	}
+	&__media {
+	}
+	// .footer__content
+	&__content {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding: 33px 0;
+		column-gap: 40px;
+		row-gap: 20px;
+		@media (max-width: toEm($tablet)) {
+			padding: 20px 0;
+		}
+		@media (max-width: toEm($mobile)) {
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			row-gap: 20px;
+		}
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			height: 1px;
+			width: 100%;
+			background-color: rgba(255, 255, 255, 0.1);
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+	}
+	// .footer__spoller
+	&__spoller {
+	}
+	// .footer__copyright
+	&__copyright {
+		padding-top: 33px;
+		font-size: 16px;
+		line-height: 162%;
+		color: rgba(255, 255, 255, 0.8);
+		text-align: center;
+		@media (max-width: toEm($tablet)) {
+			padding-top: 20px;
+		}
+		@media (max-width: toEm($mobileSmall)) {
+			font-size: 14px;
+		}
+	}
+}
+
+.spoller-footer {
+	@media (max-width: toEm($tablet)) {
+		flex: 0 0 calc(50% - 40px);
+	}
+	@media (max-width: toEm($mobile)) {
+		flex: 0 0 auto;
+	}
+	// .spoller-footer__title
+	&__title--alone,
+	&__title {
+		font-weight: 800;
+		font-size: 20px;
+		line-height: 150%;
+		color: #fff;
+		margin-bottom: 20px;
+		@media (max-width: toEm($tablet)) {
+			margin-bottom: 15px;
+		}
+	}
+	&__title {
+		.--spoller-init & {
+			&::after {
+				content: '\f122';
+				position: relative;
+				top: -3px;
+				font-family: 'iconfont';
+				font-size: 10px;
+				rotate: 0deg;
+				transition: rotate 0.3s;
+				margin-left: 8px;
+			}
+		}
+	}
+	&__title.--spoller-active {
+		&::after {
+			rotate: 180deg;
+			top: 0;
+		}
+	}
+
+	// .spoller-footer__list
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		@media (max-width: toEm($tablet)) {
+			gap: 8px;
+		}
+		@media (max-width: toEm($mobile)) {
+			align-items: center;
+		}
+	}
+	// .spoller-footer__item
+	&__item {
+		a {
+			display: flex;
+			align-items: center;
+			line-height: 167%;
+			color: #fff;
+			transition: color 0.3s;
+			@media (any-hover: hover) and (any-pointer: fine) {
+				&:hover {
+					color: $primary;
+				}
+			}
+			&::before {
+				margin-right: 8px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex: 0 0 24px;
+				height: 24px;
+				font-weight: 400;
+				color: $primary;
+			}
+			@media (max-width: toEm($mobileSmall)) {
+				font-size: 16px;
+			}
+		}
+	}
+	// .spoller-footer__media-list
+	&__media-list {
+	}
+}
+
+.list-media {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	html:not([data-fls-touch]) & {
+		&:has(.list-media__item:hover) .list-media__item:not(:hover) {
+			opacity: 0.4;
+		}
+	}
+	@media (max-width: toEm($tablet)) {
+		gap: 10px;
+	}
+	// .list-media__item
+	&__item {
+		font-size: 50px;
+		height: 50px;
+		flex: 0 0 50px;
+		transition: opacity 0.5s;
+
+		a {
+			line-height: 0;
+			&::before {
+				color: $primary;
+			}
+		}
 	}
 }

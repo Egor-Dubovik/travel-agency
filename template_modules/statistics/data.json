@@ -175,7 +175,11 @@
       "menu.json",
       "menu.scss",
       "header.scss",
-      "home.scss"
+      "home.scss",
+      "footer.html",
+      "footer.scss",
+      "app.js",
+      "spollers.scss"
     ]
   }
 }

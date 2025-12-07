@@ -25,18 +25,12 @@
 	&__logo {
 		position: relative;
 		z-index: 1;
-		aspect-ratio: 133 / 130;
-		width: 100%;
-		max-width: 133px;
 		flex: 0 0 133px;
-		height: 100%;
-		object-fit: cover;
+
 		@media (max-width: toEm(1200)) {
-			max-width: 100px;
 			flex: 0 0 100px;
 		}
 		@media (max-width: toEm($mobile)) {
-			max-width: 75px;
 			flex: 0 0 75px;
 		}
 	}
