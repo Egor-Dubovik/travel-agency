@@ -12,7 +12,7 @@
 			top: -100%;
 			overflow: auto;
 			padding: 200px 15px 30px 15px;
-			background-color: rgba(5, 5, 5, 0.8);
+			background-color: rgba(0, 0, 0, 0.8);
 			transition: top 0.3s cubic-bezier(0.65, 0, 0.35, 1);
 			&::before {
 				content: '';
@@ -67,7 +67,7 @@
 			bottom: -3px;
 			left: 50%;
 			width: 0;
-			height: 2px;
+			height: 3px;
 			background-color: $primary;
 			transition: width 0.5s, left 0.5s;
 		}

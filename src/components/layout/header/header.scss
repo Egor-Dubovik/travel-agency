@@ -4,7 +4,12 @@
 	left: 0;
 	width: 100%;
 	padding: 20px 0;
+	z-index: 50;
+	transition: padding 0.2s;
 	@media (max-width: toEm($mobile)) {
+		padding: 10px 0;
+	}
+	&.--header-scroll {
 		padding: 10px 0;
 	}
 	// .header__container
@@ -17,8 +22,15 @@
 		}
 	}
 	&__logo-link {
+		flex: 0 0 133px;
+		@media (max-width: toEm(1200)) {
+			flex: 0 0 100px;
+		}
 		@media (max-width: toEm($tablet)) {
 			margin-right: auto;
+		}
+		@media (max-width: toEm($mobile)) {
+			flex: 0 0 75px;
 		}
 	}
 	// .header__logo
@@ -26,12 +38,12 @@
 		position: relative;
 		z-index: 1;
 		flex: 0 0 133px;
-
-		@media (max-width: toEm(1200)) {
-			flex: 0 0 100px;
-		}
-		@media (max-width: toEm($mobile)) {
-			flex: 0 0 75px;
+		transition: max-width 0.2s;
+		.--header-scroll & {
+			max-width: 90px;
+			@media (max-width: toEm($mobileSmall)) {
+				max-width: 75px;
+			}
 		}
 	}
 	// .header__menu
@@ -47,10 +59,6 @@
 		display: flex;
 		align-items: center;
 		gap: 22px;
-
-		:first-child {
-			flex: 0 0 46px;
-		}
 	}
 	// .header__button
 	&__button {

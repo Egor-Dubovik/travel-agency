@@ -1,5 +1,130 @@
 <script type="module" src="@components/pages/home/home.js"></script>
 <link rel="stylesheet" href="@components/pages/home/home.scss">
 <main class="page page--home">
-	<section class='home__first-block first-block'></section>
+	<section class='home__first-block first-block first-block--offset'>
+		<div class="first-block__container">
+			<h1 data-fls-title class="first-block__title title__main">Enjoy in the best way!</h1>
+			<h2 data-fls-title class="first-block__sub-title title__third">Enjoy our services for your trip anytime</h2>
+			<div data-fls-tabs data-fls-tabs-animate class="first-block__tabs home-tabs">
+				<nav data-fls-tabs-titles class="home-tabs__navigation">
+					<button type="button" class="home-tabs__title --tab-active --icon-earth">Public Tours</button>
+					<button type="button" class="home-tabs__title --icon-people">Private Tours</button>
+				</nav>
+				<div data-fls-tabs-body class="home-tabs__content">
+					<div class="home-tabs__body">
+						<form class='home-tabs__form-search search-form' data-fls-form="dev" name="publicTourSearchForm" action="files/sendmail/sendmail.php" method="POST">
+							<div class="search-form__content" data-fls-select-one>
+								<div class="search-form__field-wrapper">
+									<h4 data-fls-title class="search-form__field-title title__quaternary --icon-people">Number of people</h4>
+									<select data-fls-select class='select--bg' name="publicTourSearchForm[peopleNum]">
+										<option value="" disabled selected hidden>Choose number</option>
+										<option value="1-3">1-3</option>
+										<option value="15-10">5-10</option>
+										<option value="10-20">10-20</option>
+									</select>
+								</div>
+								<div class="search-form__field-wrapper">
+									<h4 data-fls-title class="search-form__field-title title__quaternary --icon-calender">Date</h4>
+									<label class='datepicker-wrapper'>
+										<input data-fls-datepicker autocomplete="off" type="text" name="publicTourSearchForm[date]" data-error="Error" placeholder='Choose Date' class="datepicker">
+									</label>
+								</div>
+								<div class="search-form__field-wrapper">
+									<h4 data-fls-title class="search-form__field-title title__quaternary --icon-time">Time</h4>
+									<select data-fls-select class='select--bg' name="publicTourSearchForm[time]">
+										<option value="" disabled selected hidden>Choose Time</option>
+										<option value="13:00">1:00 am</option>
+										<option value="14:00">2:00 am</option>
+										<option value="15:00">3:00 am</option>
+										<option value="16:00">4:00 am</option>
+										<option value="17:00">5:00 am</option>
+									</select>
+								</div>
+								<div class="search-form__field-wrapper">
+									<h4 data-fls-title class="search-form__field-title title__quaternary --icon-tour">Tour</h4>
+									<select data-fls-select class='select--bg' name="publicTourSearchForm[tour]">
+										<option value="" disabled selected hidden>Select Tour</option>
+										<option value="lucca-bike">Lucca Bike Tour</option>
+										<option value="book-bike">Book a bike</option>
+										<option value="lucca-outside">Tour in the outside of Lucca</option>
+										<option value="tuscany-wine">Wine Tasting in Tuscany</option>
+										<option value="cinque-terre">Cinque Terre Tour</option>
+										<option value="siena-surroundings">Siena and Surroundings</option>
+										<option value="pisa-italy">Pisa & LuccaItaly Special Trips</option>
+										<option value="italy-special">Italy Special Trips</option>
+									</select>
+								</div>
+								<div class="search-form__field-wrapper">
+									<h4 data-fls-title class="search-form__field-title title__quaternary --icon-car">Transportation</h4>
+									<select data-fls-select class='select--bg' name="publicTourSearchForm[transport]">
+										<option value="" disabled selected hidden>Select Transportation</option>
+										<option value="minivan-bus">Minivan and Bus</option>
+										<option value="transfers-ncc">Transfers & NCC</option>
+										<option value="luxury">Luxury Experience</option>
+									</select>
+								</div>
+							</div>
+							<button type="submit" class="search-form__button button button--searcher --icon-loop"></button>
+						</form>
+					</div>
+					<div class="home-tabs__body">
+						<form class='home-tabs__form-search search-form' data-fls-form="dev" name="privateTourSearchForm" action="files/sendmail/sendmail.php" method="POST">
+							<div class="search-form__content" data-fls-select-one>
+								<div class="search-form__field-wrapper">
+									<h4 data-fls-title class="search-form__field-title title__quaternary --icon-people">Number of people</h4>
+									<select data-fls-select class='select--bg' name="privateTourSearchForm[peopleNum]">
+										<option value="" disabled selected hidden>Choose number</option>
+										<option value="1-3">1-3</option>
+										<option value="15-10">5-10</option>
+										<option value="10-20">10-20</option>
+									</select>
+								</div>
+								<div class="search-form__field-wrapper">
+									<h4 data-fls-title class="search-form__field-title title__quaternary --icon-calender">Date</h4>
+									<label class='datepicker-wrapper'>
+										<input id='date-1' data-fls-datepicker autocomplete="off" type="text" name="privateTourSearchForm[date]" data-error="Error" placeholder='Choose Date' class="datepicker">
+									</label>
+								</div>
+								<div class="search-form__field-wrapper">
+									<h4 data-fls-title class="search-form__field-title title__quaternary --icon-time">Time</h4>
+									<select data-fls-select class='select--bg' name="privateTourSearchForm[time]">
+										<option value="" disabled selected hidden>Choose Time</option>
+										<option value="13:00">1:00 am</option>
+										<option value="14:00">2:00 am</option>
+										<option value="15:00">3:00 am</option>
+										<option value="16:00">4:00 am</option>
+										<option value="17:00">5:00 am</option>
+									</select>
+								</div>
+								<div class="search-form__field-wrapper">
+									<h4 data-fls-title class="search-form__field-title title__quaternary --icon-tour">Tour</h4>
+									<select data-fls-select class='select--bg' name="privateTourSearchForm[tour]">
+										<option value="" disabled selected hidden>Select Tour</option>
+										<option value="lucca-bike">Lucca Bike Tour</option>
+										<option value="book-bike">Book a bike</option>
+										<option value="lucca-outside">Tour in the outside of Lucca</option>
+										<option value="tuscany-wine">Wine Tasting in Tuscany</option>
+										<option value="cinque-terre">Cinque Terre Tour</option>
+										<option value="siena-surroundings">Siena and Surroundings</option>
+										<option value="pisa-italy">Pisa & LuccaItaly Special Trips</option>
+										<option value="italy-special">Italy Special Trips</option>
+									</select>
+								</div>
+								<div class="search-form__field-wrapper">
+									<h4 data-fls-title class="search-form__field-title title__quaternary --icon-car">Transportation</h4>
+									<select data-fls-select class='select--bg' name="privateTourSearchForm[transport]">
+										<option value="" disabled selected hidden>Select Transportation</option>
+										<option value="minivan-bus">Minivan and Bus</option>
+										<option value="transfers-ncc">Transfers & NCC</option>
+										<option value="luxury">Luxury Experience</option>
+									</select>
+								</div>
+							</div>
+							<button type="submit" class="search-form__button button button--searcher --icon-loop"></button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </main>

@@ -1,0 +1,29 @@
+.title {
+	// .title__main
+	&__main {
+		font-family: $titleFamily;
+		@include adaptiveValue('font-size', 72, 48, 0, $containerWidth, 320);
+		text-align: center;
+		color: #fff;
+	}
+	// .title__primary
+	&__primary {
+		@include adaptiveValue('font-size', 48, 24, 0, $containerWidth, 320);
+		font-weight: 800;
+	}
+	// .title__secondary
+	&__secondary {
+		@include adaptiveValue('font-size', 32, 20, 0, $containerWidth, 320);
+		font-weight: 800;
+	}
+	// .title__third
+	&__third {
+		@include adaptiveValue('font-size', 24, 18, 0, $containerWidth, 320);
+		font-weight: 700;
+	}
+	// .title__quaternary
+	&__quaternary {
+		font-size: 18px;
+		font-weight: 600;
+	}
+}

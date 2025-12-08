@@ -89,7 +89,17 @@
       {
         "date": "07.12.2025",
         "start": 1765128722941,
-        "end": 1765128722941
+        "end": 1765141755765
+      },
+      {
+        "date": "08.12.2025",
+        "start": 1765197453594,
+        "end": 1765208672559
+      },
+      {
+        "date": "08.12.2025",
+        "start": 1765210168164,
+        "end": 1765210168164
       }
     ],
     "files": [
@@ -179,7 +189,11 @@
       "footer.html",
       "footer.scss",
       "app.js",
-      "spollers.scss"
+      "spollers.scss",
+      "tabs.html",
+      "title.html",
+      "title.scss",
+      "scroll.scss"
     ]
   }
 }
