@@ -127,4 +127,44 @@
 			</div>
 		</div>
 	</section>
+	<section class="home__destination home--block destination">
+		<div class="destination__container">
+			<header class="destination__header">
+				<h2 data-fls-title class="destination__title title__secondary">Explore Our Popular destinations</h2>
+				<div class="destination__slider-buttons">
+					<button type="button" class="destination__slider-button destination__slider-button-prev swiper-button swiper-button-prev"></button>
+					<button type="button" class="destination__slider-button destination__slider-button-next swiper-button swiper-button-next"></button>
+				</div>
+			</header>
+			<div data-fls-slider class="destination__slider swiper">
+				<div class="destination__wrapper swiper-wrapper">
+					<each loop='tour in [
+					{	"title": "Cinque Terre Tour", "description": "Visiting the 5 Terre is a must, and you can never go there enough.", "img": "@img/tour-card/CinqueTerreTour.jpg", "people": "10-50", "coast": "34" },
+					{ "title": "Wine tasting in Tuscany", "description": "The real magic is here where you can enjoy the best Tuscan wine and eat.", "img": "@img/tour-card/WineTastingTuscany.jpg", "people": "10-30", "coast": "45" },
+					{	"title": "Siena and Surroundings", "description": "Visit the beautiful Siena and the cities that surround it to experience elit amet architecto recusandae quaerat, fuga!", "img": "@img/tour-card/SienaSurroundings.jpg", "people": "5-10", "coast": "34" },
+					{	"title": "Tour of the Lucca Hills", "description": "Visit with us the beautiful hills of Lucca, with a guide who will make good trip", "img": "@img/tour-card/TourLuccaHills.jpg", "people": "5-12", "coast": "34" },
+					{ "title": "Gardaland, Verona", "description": "Visit the largest and most fun park in Italy suitable for all of people", "img": "@img/tour-card/GardalandVerona.jpg", "people": "10-50", "coast": "34" },
+					{ "title": "Pisa & Lucca", "description": "Visiting the 5 Terre is a must, and you can never go there enough to arrive", "img": "@img/tour-card/PisaLucca.jpg", "people": "10-50", "coast": "34" },
+					{ "title": "Florence", "description": "Visit the beautiful Siena and the cities that surround it to experience", "img": "@img/tour-card/Florence.jpg", "people": "5-10", "coast": "34" },
+					{ "title": "Lucca Bike Tour", "description": "A tour of the city and its surroundings led by a professional guide.", "img": "@img/tour-card/LuccBikeTour.jpg", "people": "3-10", "coast": "34" }
+					]'>
+						<div class="destination__slide swiper-slide">
+							<include src="@components/custom/productcard/productcard.html" locals='{
+									"class": "",
+									"title": "[[tour.title]]",
+									"description": "[[tour.description]]",
+									"img": "[[tour.img]]",
+									"people": "[[tour.people]]",
+									"coast": "[[tour.coast]]"
+								}'>
+						</div>
+					</each>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="home__about about">
+		<div class="about__container">
+		</div>
+	</section>
 </main>

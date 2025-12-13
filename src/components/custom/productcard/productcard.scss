@@ -1,4 +1,12 @@
 .productcard {
+	display: flex;
+	flex-direction: column;
+	// height: 100%;
+	> * {
+		&:not(:last-child) {
+			@include adaptiveValue('margin-bottom', 12, 8, 0, $containerWidth, $mobileSmall);
+		}
+	}
 	// .productcard__img
 	&__img {
 		aspect-ratio: 330 / 404;
@@ -7,24 +15,24 @@
 		height: 100%;
 		object-fit: cover;
 		border-radius: 24px;
-		margin-bottom: 16px;
+		@include adaptiveValue('margin-bottom', 16, 12, 0, $containerWidth, $mobileSmall);
+		@media (max-width: toEm(560)) {
+			max-width: 100%;
+		}
 	}
-	// .productcard__content
-	&__content {
-		display: flex;
-		flex-direction: column;
-		gap: 12px;
+	// .productcard__title-link
+	&__title-link {
 	}
 	// .productcard__title
 	&__title {
+		@include adaptiveValue('font-size', 24, 18, 0, $containerWidth, $mobileSmall);
 		font-weight: 700;
-		font-size: 24px;
-		a {
-			@media (any-hover: hover) and (any-pointer: fine) {
-				&:hover {
-					text-decoration: underline;
-					text-underline-offset: 2px;
-				}
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		@media (any-hover: hover) and (any-pointer: fine) {
+			&:hover {
+				text-decoration: underline 2px;
 			}
 		}
 	}
@@ -48,10 +56,20 @@
 				font-size: 18px;
 			}
 		}
+		@media (max-width: toEm($mobileSmall)) {
+			font-size: 16px;
+			span {
+				font-size: 20px;
+				&::before {
+					font-size: 16px;
+				}
+			}
+		}
 	}
 	// .productcard__tour-info
 	&__tour-info {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
 		gap: 10px;
 	}
@@ -63,7 +81,8 @@
 		font-weight: 600;
 		font-size: 16px;
 		color: $primary;
-		// text-transform: uppercase;
+		text-transform: uppercase;
+		white-space: nowrap;
 		&::before {
 			font-size: 20px;
 		}
@@ -76,6 +95,7 @@
 		font-weight: 600;
 		font-size: 16px;
 		color: $primary;
+		white-space: nowrap;
 		&::before {
 			font-size: 24px;
 		}
@@ -91,5 +111,8 @@
 		-webkit-box-orient: vertical;
 		-webkit-line-clamp: 2;
 		overflow: hidden;
+		@media (max-width: toEm($mobileSmall)) {
+			font-size: 16px;
+		}
 	}
 }

@@ -1,12 +1,18 @@
 .home {
-	// .home__container
-	&__container {
-	}
-	// .home__first-block
 	&__first-block {
+	}
+	&__destination {
+		@include adaptiveValue('padding-top', 120, 40, 0, $containerWidth, $mobileSmall);
+	}
+	&--block {
+		@include adaptiveValue('padding-top', 60, 40, 0, $containerWidth, $mobileSmall);
+		@include adaptiveValue('padding-bottom', 60, 40, 0, $containerWidth, $mobileSmall);
 	}
 }
 
+//*  ===========================
+//*   first-block
+//*  ===========================
 .first-block {
 	display: flex;
 	justify-content: center;
@@ -182,25 +188,51 @@
 	}
 }
 
-.--icon-people {
+//*  ===========================
+//*   destination
+//*  ===========================
+.destination {
+	// .destination__container
+	&__container {
+	}
+	// .destination__header
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 10px;
+		@include adaptiveValue('margin-bottom', 57, 20, 0, $containerWidth, $mobileSmall);
+	}
+	// .destination__title
+	&__title {
+	}
+	// .destination__slider-buttons
+	&__slider-buttons {
+		display: flex;
+		gap: 20px;
+		@media (max-width: toEm($mobileSmall)) {
+			gap: 15px;
+		}
+	}
+	// .destination__slider-button
+	&__slider-button {
+		flex: 0 0 50px;
+		@media (max-width: toEm($mobileSmall)) {
+			flex: 0 0 45px;
+			height: 45px;
+		}
+	}
+	// .destination__slider
+	&__slider {
+	}
+	// .destination__wrapper
+	&__wrapper {
+	}
+	// .destination__slide
+	&__slide {
+	}
 }
-.select--bg {
-}
-.--icon-calender {
-}
-.datepicker-wrapper {
-}
-.datepicker {
-}
-.--icon-time {
-}
-.--icon-tour {
-}
-.--icon-car {
-}
-.button {
-}
-.button--searcher {
-}
-.--icon-loop {
-}
+
+//*  ===========================
+//*   about
+//*  ===========================
