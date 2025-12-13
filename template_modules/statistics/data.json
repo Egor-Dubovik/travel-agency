@@ -124,7 +124,12 @@
       {
         "date": "13.12.2025",
         "start": 1765633140688,
-        "end": 1765633140688
+        "end": 1765639870484
+      },
+      {
+        "date": "13.12.2025",
+        "start": 1765645371398,
+        "end": 1765645371398
       }
     ],
     "files": [
@@ -221,7 +226,8 @@
       "scroll.scss",
       "tour.json",
       "slider.js",
-      "slider.scss"
+      "slider.scss",
+      "tourist-woman.png"
     ]
   }
 }
