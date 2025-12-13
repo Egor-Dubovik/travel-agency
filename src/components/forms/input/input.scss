@@ -33,16 +33,6 @@ textarea {
 	}
 }
 
-[data-fls-form-error] {
-	position: absolute;
-	bottom: -15px;
-	left: 0;
-	font-size: 12px;
-	color: $errorColor;
-	opacity: 0;
-	animation: fadeIn 0.5s ease forwards;
-}
-
 .input[placeholder]:not([data-fls-placeholder-nohiden]) {
 	&::placeholder {
 		transition: opacity 0.3s;

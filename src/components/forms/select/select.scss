@@ -153,6 +153,12 @@
 		}
 	}
 	&:has(.select--bg) {
+		.select__body {
+			border: 1px solid #fff;
+			.--form-error & {
+				border: 1px solid $errorColor;
+			}
+		}
 		.select__options,
 		.select__title {
 			background-color: #fff;

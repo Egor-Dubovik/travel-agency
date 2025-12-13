@@ -227,7 +227,12 @@
       "tour.json",
       "slider.js",
       "slider.scss",
-      "tourist-woman.png"
+      "tourist-woman.png",
+      "bookbike.html",
+      "intl-tel-input.js",
+      "bookbike.scss",
+      "form.js",
+      "_functions.js"
     ]
   }
 }

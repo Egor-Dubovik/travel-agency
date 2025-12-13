@@ -1,0 +1,60 @@
+<div data-fls-bookbike class="book-bike__container">
+	<div class="book-bike__content">
+		<h2 class='book-bike__title title__secondary'>Book Now Bike</h2>
+		<form data-fls-select-one id='book-bike' class='book-bike__form form-book-bike' data-fls-form="dev" action="files/sendmail/sendmail.php" method="POST">
+			<label class='form-book-bike__label'>
+				<span class='form-book-bike__input-title'>Name and Surname</span>
+				<div class='form-book-bike__field form-field'>
+					<input required class='form-book-bike__input' type="text" name="book-bike[name]" data-fls-form-errtext="Name required" placeholder="Enter your name and surname">
+				</div>
+			</label>
+			<label class='form-book-bike__label'>
+				<span class='form-book-bike__input-title'>Email Address</span>
+				<div class='form-book-bike__field form-field'>
+					<input required class='form-book-bike__input' type="email" name="book-bike[email]" data-fls-form-errtext="Enter correct email" placeholder="Enter your email address">
+				</div>
+			</label>
+			<label class='form-book-bike__label'>
+				<span class='form-book-bike__input-title'>Telephone Number</span>
+				<div class='form-book-bike__field form-field'>
+					<input id='phone' required class='form-book-bike__input' type="text" name="book-bike[email]" data-fls-form-errtext="Phone required" placeholder="Enter your phone">
+				</div>
+			</label>
+			<label class='form-book-bike__label'>
+				<span class='form-book-bike__input-title'>Service Type</span>
+				<div class='form-book-bike__field form-field'>
+					<select required class='select--bg' data-fls-select name="book-bike[service]" data-fls-select-modif="form" data-fls-form-errtext="Service type required">
+						<option value="" disabled selected hidden>Select the service type</option>
+						<option value="bike">Bike and rickshaw rental</option>
+						<option value="guide">Countryside guide</option>
+						<option value="taxi">Taxi and NCC service</option>
+						<option value="bus">Bus Package</option>
+					</select>
+				</div>
+			</label>
+			<label class='form-book-bike__label datepicker-wrapper'>
+				<span class='form-book-bike__input-title'>Date</span>
+				<div class='form-book-bike__field form-field'>
+					<input required data-fls-datepicker autocomplete="off" type="text" name="book-bike[date]" data-fls-form-errtext="Date required" placeholder='Select the date' class="datepicker">
+				</div>
+			</label>
+			<label class='form-book-bike__label'>
+				<span class='form-book-bike__input-title'>Time</span>
+				<div class='form-book-bike__field form-field'>
+					<select required class='select--bg' data-fls-select name="book-bike[time]" data-fls-select-modif="form" data-fls-form-errtext="Time required">
+						<option value="" disabled selected hidden>Select the time</option>
+						<option value="13:00">1:00 am</option>
+						<option value="14:00">2:00 am</option>
+						<option value="15:00">3:00 am</option>
+						<option value="16:00">4:00 am</option>
+						<option value="17:00">5:00 am</option>
+					</select>
+				</div>
+			</label>
+			<button type="submit" class="form-book-bike__button button">Book Now</button>
+		</form>
+	</div>
+	<div class="book-bike__image">
+		<img src="@img/common/bike.png" alt="bike">
+	</div>
+</div>
