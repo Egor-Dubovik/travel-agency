@@ -134,7 +134,17 @@
       {
         "date": "14.12.2025",
         "start": 1765717717804,
-        "end": 1765717717804
+        "end": 1765723334274
+      },
+      {
+        "date": "14.12.2025",
+        "start": 1765723459621,
+        "end": 1765723579412
+      },
+      {
+        "date": "14.12.2025",
+        "start": 1765723592620,
+        "end": 1765723592620
       }
     ],
     "files": [
@@ -237,7 +247,10 @@
       "intl-tel-input.js",
       "bookbike.scss",
       "form.js",
-      "_functions.js"
+      "_functions.js",
+      "comments-block.js",
+      "comments-block.html",
+      "comments-block.scss"
     ]
   }
 }

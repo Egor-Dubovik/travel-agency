@@ -428,7 +428,7 @@
 	&__container {
 		display: flex;
 		flex-wrap: wrap;
-		@include adaptiveValue('gap', 33, 25, 0, $containerWidth, $mobileSmall);
+		@include adaptiveValue('gap', 33, 20, 0, $containerWidth, $mobileSmall);
 		@media (max-width: toEm($tablet)) {
 			// max-width: 768px;
 		}
@@ -459,13 +459,12 @@
 	}
 	// .services__title
 	&__title {
-		margin: 20px 0 12px 0;
-		@media (max-width: toEm($mobileSmall)) {
-			margin: 12px 0 8px 0;
-		}
+		@include adaptiveValue('margin-top', 20, 12);
+		@include adaptiveValue('margin-bottom', 12, 8);
 	}
 	// .services__description
 	&__description {
+		@include adaptiveValue('font-size', 18, 16);
 	}
 }
 

@@ -24,16 +24,58 @@ import './slider.scss';
 
 // Ініціалізація слайдерів
 function initSliders() {
-	// Список слайдерів
-	// Перевіряємо, чи є слайдер на сторінці
 	if (document.querySelector('.destination__slider')) {
-		// <- Вказуємо склас потрібного слайдера
-		// Створюємо слайдер
 		new Swiper('.destination__slider', {
 			modules: [Navigation, Keyboard],
 			slidesPerView: 4,
-			// slidesPerGroup: 1,
 			spaceBetween: 30,
+			speed: 800,
+			lazyPreloadPrevNext: 1,
+
+			navigation: {
+				prevEl: '.destination__slider-button-prev',
+				nextEl: '.destination__slider-button-next',
+			},
+			keyboard: {
+				enabled: true,
+				onlyInViewport: true,
+				pageUpDown: true,
+			},
+
+			breakpoints: {
+				260: {
+					slidesPerView: 1,
+					spaceBetween: 15,
+				},
+				560: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				680: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				1030: {
+					slidesPerView: 4,
+					spaceBetween: 20,
+				},
+				1400: {
+					spaceBetween: 30,
+				},
+			},
+
+			// Події
+			on: {},
+		});
+	}
+	if (document.querySelector('.comments-block__slider')) {
+		// <- Вказуємо склас потрібного слайдера
+		// Створюємо слайдер
+		new Swiper('.comments-block__slider', {
+			modules: [Navigation, Keyboard],
+			slidesPerView: 2,
+			// slidesPerGroup: 1,
+			spaceBetween: 20,
 			//autoHeight: true,
 			speed: 800,
 			lazyPreloadPrevNext: 1,
@@ -70,8 +112,8 @@ function initSliders() {
 
 			// Кнопки "вліво/вправо"
 			navigation: {
-				prevEl: '.destination__slider-button-prev',
-				nextEl: '.destination__slider-button-next',
+				prevEl: '.comments-block__slider-button-prev',
+				nextEl: '.comments-block__slider-button-next',
 			},
 			keyboard: {
 				enabled: true,
@@ -85,20 +127,9 @@ function initSliders() {
 					slidesPerView: 1,
 					spaceBetween: 15,
 				},
-				560: {
+				768: {
 					slidesPerView: 2,
 					spaceBetween: 20,
-				},
-				680: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1030: {
-					slidesPerView: 4,
-					spaceBetween: 20,
-				},
-				1400: {
-					spaceBetween: 30,
 				},
 			},
 
