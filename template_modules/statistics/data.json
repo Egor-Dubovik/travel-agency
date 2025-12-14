@@ -250,7 +250,8 @@
       "_functions.js",
       "comments-block.js",
       "comments-block.html",
-      "comments-block.scss"
+      "comments-block.scss",
+      "popup.html"
     ]
   }
 }
