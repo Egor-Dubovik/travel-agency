@@ -61,6 +61,10 @@ textarea.input {
 }
 
 [data-fls-input-viewpass] {
+	&::after,
+	&::before {
+		transition: color 0.3s;
+	}
 	&::after {
 		content: '\f119';
 		opacity: 1;
@@ -68,6 +72,14 @@ textarea.input {
 	&::before {
 		content: '\f108';
 		opacity: 0;
+	}
+	@media (any-hover: hover) and (any-pointer: fine) {
+		&:hover {
+			&::after,
+			&::before {
+				color: rgba(51, 51, 51, 0.7);
+			}
+		}
 	}
 }
 

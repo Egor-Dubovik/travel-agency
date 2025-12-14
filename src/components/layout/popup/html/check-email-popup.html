@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="@components/layout/popup/popup.scss">
+<div data-fls-popup="check-email-popup" aria-hidden="true" class="popup">
+	<div data-fls-popup-wrapper class="popup__wrapper">
+		<div data-fls-popup-body class="popup__body">
+			<form class='form check-email' data-fls-form="dev" method="POST" action="php/sendmail" method="POST">
+				<div class="form__icon --icon-mail"></div>
+				<div class="check-email__heading form-heading">
+					<h2 class='form-heading__title form-heading__title--center'>Check your email</h2>
+				</div>
+				<p class='form__description'>We sent a password reset link to <strong>loremipsum@gmail.com</strong></p>
+				<a data-fls-button href='mailto:toloremipsum@gmail.com' class="check-email__button button">Open email app</a>
+				<p data-fls-formtext class='login__text'>Didn't receive the email? <button type='button'>Click to resend</button></p>
+				<a data-fls-button href='#login-popup' class="check-email__button form__btn-back button-text --icon-long_back_arrow">Back to Login</a>
+			</form>
+		</div>
+	</div>
+</div>

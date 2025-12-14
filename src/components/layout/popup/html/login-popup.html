@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="@components/layout/popup/popup.scss">
+<div data-fls-popup="login-popup" aria-hidden="true" class="popup">
+	<div data-fls-popup-wrapper class="popup__wrapper">
+		<div data-fls-popup-body class="popup__body">
+			<form class='form login' data-fls-form="dev" method="POST" action="php/sendmail" method="POST">
+				<div class="login__heading form-heading">
+					<h2 class='form-heading__title'>Login</h2>
+					<button data-fls-popup-close type='button' class='form-heading__close-btn --icon-plus'></button>
+				</div>
+				<label class='login__input-wrapper input-wrapper'>
+					<span>Email Address</span>
+					<div class='login__field form-field'>
+						<input data-fls-form-validatenow data-fls-input required autofocus type="email" name="login[email]" data-fls-form-errtext="Enter a correct email" placeholder="Enter your email address" class="login__input input">
+					</div>
+				</label>
+				<label class='login__input-wrapper input-wrapper'>
+					<span>Password</span>
+					<div class='login__field form-field'>
+						<input data-fls-form-validatenow data-fls-input required autocomplete="off" type="password" name="login[password]" data-fls-form-errtext="Password required" placeholder="Enter your password" class="login__input input">
+						<button type='button' data-fls-input-viewpass class='password-switcher'></button>
+					</div>
+				</label>
+				<a class='form__text-link form__text-link--forgot-password' href="#forgot-pass-popup">Forgot your password?</a>
+				<button data-fls-button type="submit" class="login__button button">Sign In</button>
+				<p data-fls-formtext class='login__text'>Don’t have an account? <a href="#sign-up-popup">Sign Up</a></p>
+			</form>
+		</div>
+	</div>
+</div>

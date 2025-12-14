@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="@components/layout/popup/popup.scss">
+<div data-fls-popup="new-pass-popup" aria-hidden="true" class="popup">
+	<div data-fls-popup-wrapper class="popup__wrapper">
+		<div data-fls-popup-body class="popup__body">
+			<form class='form new-pass' data-fls-form="dev" method="POST" action="php/sendmail" method="POST">
+				<div class="new-pass__heading form-heading">
+					<h2 class='form-heading__title form-heading__title--center'>Set New Password</h2>
+				</div>
+				<p class='form__description'>Your new password must be different from previously used passwords.</p>
+				<label class='new-pass__input-wrapper input-wrapper'>
+					<span>New Password</span>
+					<div class='new-pass__field form-field'>
+						<input data-fls-form-validatenow data-fls-input required autofocus autocomplete="off" type="password" name="new-pass[password]" data-fls-form-errtext="Password required" placeholder="Enter your password" class="new-pass__input input">
+						<button type='button' data-fls-input-viewpass class='password-switcher'></button>
+					</div>
+				</label>
+				<label class='new-pass__input-wrapper input-wrapper'>
+					<span>New Password</span>
+					<div class='new-pass__field form-field'>
+						<input data-fls-form-validatenow data-fls-input required autocomplete="off" type="password" name="new-pass[confirmPassword]" data-fls-form-errtext="Confirm password required" placeholder="Enter your password" class="new-pass__input input">
+						<button type='button' data-fls-input-viewpass class='password-switcher'></button>
+					</div>
+				</label>
+				<button data-fls-button type="submit" class="new-pass__button button">Reset Password</button>
+				<a data-fls-button href='#login-popup' class="check-email__button form__btn-back button-text --icon-long_back_arrow">Back to Login</a>
+			</form>
+		</div>
+	</div>
+</div>

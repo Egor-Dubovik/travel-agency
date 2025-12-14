@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="@components/layout/popup/popup.scss">
+<div data-fls-popup="forgot-pass-popup" aria-hidden="true" class="popup">
+	<div data-fls-popup-wrapper class="popup__wrapper">
+		<div data-fls-popup-body class="popup__body">
+			<form class='form forgot-pass' data-fls-form="dev" method="POST" action="php/sendmail" method="POST">
+				<div class="form__icon --icon-key"></div>
+				<div class="forgot-pass__heading form-heading">
+					<h2 class='form-heading__title form-heading__title--center'>Forgot Password</h2>
+				</div>
+				<p class='form__description'>No worries, we'll send you reset instructions.</p>
+				<label class='forgot-pass__input-wrapper input-wrapper'>
+					<span>Email Address</span>
+					<div class='forgot-pass__field form-field'>
+						<input data-fls-form-validatenow data-fls-input required autofocus type="email" name="forgot-pass[email]" data-fls-form-errtext="Enter a correct email" placeholder="Enter your email address" class="forgot-pass__input input">
+					</div>
+				</label>
+				<button data-fls-button type="submit" class="forgot-pass__button button">Reset Password</button>
+				<a data-fls-button href='#login-popup' class="forgot-pass__button form__btn-back button-text --icon-long_back_arrow">Back to Login</a>
+			</form>
+		</div>
+	</div>
+</div>

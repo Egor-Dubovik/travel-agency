@@ -1,13 +1,13 @@
 body::after {
-	content: "";
-	background-color: rgba(0, 0, 0, 0.5);
+	content: '';
+	background-color: rgba(0, 0, 0, 0.65);
 	position: fixed;
 	width: 100%;
 	height: 100%;
 	top: 0;
 	left: 0;
 	opacity: 0;
-	transition: opacity 0.8s ease 0s;
+	transition: opacity 0.8s;
 	pointer-events: none;
 	z-index: 149;
 }
@@ -33,7 +33,11 @@ body::after {
 }
 [data-fls-popup-active] [data-fls-popup-body] {
 	visibility: visible;
-	transform: scale(1);
+	opacity: 1;
+	form {
+		// transform: rotateY(0);
+		animation: open-form ease 0.6s 0.2s forwards;
+	}
 }
 [data-fls-popup-wrapper] {
 	display: flex;
@@ -45,21 +49,38 @@ body::after {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	perspective: 800px;
 }
 [data-fls-popup-body] {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	visibility: hidden;
-	transform: scale(0);
-	transition:
-		transform 0.3s ease 0s,
-		visibility 0.3s ease 0s;
-	background-color: #eee;
-	padding: 20px;
+	transition: transform 0.3s, visibility 0.3s, opacity 0.3s;
+	opacity: 0;
 	width: 100%;
-	max-width: 900px;
-	border-radius: 20px;
+	max-width: 488px;
+	perspective: 800px;
+	form {
+		// transition: transform 0.6s 0.2s;
+
+		transform: rotateY(35deg);
+		opacity: 0;
+	}
 }
 
 [data-fls-popup-youtube-place] iframe {
 	width: 100%;
 	aspect-ratio: 16 / 9;
+}
+
+@keyframes open-form {
+	0% {
+		transform: rotateY(35deg);
+		opacity: 0;
+	}
+	100% {
+		transform: rotateY(0deg);
+		opacity: 1;
+	}
 }

@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="@components/layout/popup/popup.scss">
+<div data-fls-popup="success-reset-pass-popup" aria-hidden="true" class="popup">
+	<div data-fls-popup-wrapper class="popup__wrapper">
+		<div data-fls-popup-body class="popup__body">
+			<form class='form success-reset-pass' data-fls-form="dev" method="POST" action="php/sendmail" method="POST">
+				<div class="form__icon --icon-done"></div>
+				<div class="success-reset-pass__heading form-heading">
+					<h2 class='form-heading__title form-heading__title--center'>Password Reset</h2>
+				</div>
+				<p class='form__description'>Your password has been successfully reset.<br>Click below to login in magically.</p>
+				<a data-fls-button href='#login-popup' class="success-reset-pass__button button">Continue</a>
+				<a data-fls-button href='#login-popup' class="success-reset-pass__button form__btn-back button-text --icon-long_back_arrow">Back to Login</a>
+			</form>
+		</div>
+	</div>
+</div>

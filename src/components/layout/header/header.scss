@@ -3,22 +3,24 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding: 20px 0;
+
 	z-index: 50;
-	transition: padding 0.2s;
-	@media (max-width: toEm($mobile)) {
-		padding: 10px 0;
-	}
-	&.--header-scroll {
-		padding: 10px 0;
-	}
+
 	// .header__container
 	&__container {
+		padding: 20px 15px;
+		transition: padding 0.2s;
 		display: flex;
 		align-items: center;
 		gap: 30px;
+		.--header-scroll & {
+			padding: 10px 0;
+		}
 		@media (min-width: toEm($tablet)) {
 			justify-content: space-between;
+		}
+		@media (max-width: toEm($mobile)) {
+			padding: 10px 15px;
 		}
 	}
 	&__logo-link {

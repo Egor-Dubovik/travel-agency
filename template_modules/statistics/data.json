@@ -144,7 +144,12 @@
       {
         "date": "14.12.2025",
         "start": 1765723592620,
-        "end": 1765723592620
+        "end": 1765737908152
+      },
+      {
+        "date": "14.12.2025",
+        "start": 1765739529631,
+        "end": 1765739529631
       }
     ],
     "files": [
@@ -251,7 +256,17 @@
       "comments-block.js",
       "comments-block.html",
       "comments-block.scss",
-      "popup.html"
+      "popup.html",
+      "sign-up-popup.html",
+      "sign.html",
+      "popup.scss",
+      "login.html",
+      "login-popup.html",
+      "forgot-pass-popup.html",
+      "check-email-popup.html",
+      "login-popup copy.html",
+      "new-pass-popup.html",
+      "success-reset-pass-popup.html"
     ]
   }
 }
