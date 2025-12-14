@@ -266,7 +266,12 @@
       "check-email-popup.html",
       "login-popup copy.html",
       "new-pass-popup.html",
-      "success-reset-pass-popup.html"
+      "success-reset-pass-popup.html",
+      "about.html",
+      "digit-block.js",
+      "digit-block.html",
+      "digit-block.scss",
+      "about.scss"
     ]
   }
 }

@@ -1,0 +1,89 @@
+.about {
+	// .about__about-us
+	&__about-us {
+		@include adaptiveValue('padding-top', 120, 40, 0, $containerWidth, $mobileSmall);
+	}
+	//.about--block
+	&--block {
+		@include adaptiveValue('padding-top', 60, 40, 0, $containerWidth, $mobileSmall);
+		@include adaptiveValue('padding-bottom', 60, 40, 0, $containerWidth, $mobileSmall);
+	}
+}
+
+//*  ===========================
+//*   first-block
+//*  ===========================
+.first-block {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100lvh;
+	background: url('@img/about/main.jpg') center / cover no-repeat;
+	&::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+	// .first-block__container
+	&__container {
+		position: relative;
+		padding-top: 15px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		z-index: 1;
+	}
+	// .first-block__title
+	&__title {
+	}
+	// .first-block__sub-title
+	&__sub-title {
+		max-width: 848px;
+		margin: 24px 0;
+		line-height: math.div(24, 18);
+		text-align: center;
+		color: #fff;
+		@media (max-width: toEm($mobileSmall)) {
+			font-weight: 500;
+		}
+	}
+	// .first-block__button
+	&__button {
+	}
+}
+
+//*  ===========================
+//*		about-us
+//*  ===========================
+.about-us {
+	// .about-us__container
+	&__container {
+	}
+	// .about-us__digitblock
+	&__digitblock {
+	}
+	// .about-us__img
+	&__img {
+		flex: 1 1 600;
+		aspect-ratio: 600 / 516;
+		width: 100%;
+		@include adaptiveValue('max-width', 600, 450, 0, $containerWidth, $tablet);
+		height: 100%;
+		object-fit: cover;
+		border-radius: 24px;
+		border: 20px solid #fff;
+		box-shadow: 0 0 1px 0px rgba(95, 95, 95, 0.6);
+		@media (max-width: toEm($tablet)) {
+			max-width: 80%;
+		}
+		@media (max-width: toEm($mobile)) {
+			max-width: 100%;
+		}
+	}
+}
