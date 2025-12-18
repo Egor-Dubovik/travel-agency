@@ -1,0 +1,58 @@
+[data-fls-link] {
+	position: relative;
+	display: inline-flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 10px;
+	font-weight: 600;
+	color: $primary;
+	overflow: hidden;
+	&::before {
+		flex: 0 0 24px;
+		width: 24px;
+		height: 24px;
+		font-size: toRem(24);
+		font-weight: 400;
+		rotate: -180deg;
+	}
+
+	span {
+		display: block;
+		position: relative;
+		overflow: hidden;
+		height: 1.2em;
+		color: rgba(0, 0, 0, 0);
+
+		&::before,
+		&::after {
+			content: attr(data-text);
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			color: $primary;
+			transition: transform 0.3s;
+		}
+		&::before {
+			transform: translateY(100%);
+		}
+		&::after {
+			transform: translateY(0);
+		}
+	}
+
+	@media (any-hover: hover) and (any-pointer: fine) {
+		&:hover {
+			span {
+				&::before {
+					transform: translateY(0);
+				}
+				&::after {
+					transform: translateY(-100%);
+				}
+			}
+		}
+	}
+}
