@@ -69,8 +69,6 @@ function initSliders() {
 		});
 	}
 	if (document.querySelector('.comments-block__slider')) {
-		// <- Вказуємо склас потрібного слайдера
-		// Створюємо слайдер
 		new Swiper('.comments-block__slider', {
 			modules: [Navigation, Keyboard],
 			slidesPerView: 2,
@@ -136,6 +134,62 @@ function initSliders() {
 			// Події
 			on: {},
 		});
+	}
+	if (document.querySelector('.tour-packages__slider')) {
+		let tourPackagesSlider = null;
+
+		function initTourPackagesSlider() {
+			const screenWidth = window.innerWidth;
+			const slideCount = document.querySelectorAll('.tour-packages__slide').length;
+
+			// Destroy existing slider if it exists
+			if (tourPackagesSlider) {
+				tourPackagesSlider.destroy(true, true);
+				tourPackagesSlider = null;
+			}
+
+			if (screenWidth <= 1200 && slideCount > 6) {
+				tourPackagesSlider = new Swiper('.tour-packages__slider', {
+					modules: [Navigation, Keyboard],
+					slidesPerView: 4,
+					spaceBetween: 33,
+					speed: 800,
+					lazyPreloadPrevNext: 1,
+					navigation: {
+						prevEl: '.comments-block__slider-button-prev',
+						nextEl: '.comments-block__slider-button-next',
+					},
+					keyboard: {
+						enabled: true,
+						onlyInViewport: true,
+						pageUpDown: true,
+					},
+					breakpoints: {
+						260: {
+							slidesPerView: 1,
+							spaceBetween: 20,
+						},
+						480: {
+							slidesPerView: 2,
+							spaceBetween: 25,
+						},
+						992: {
+							slidesPerView: 3,
+							spaceBetween: 20,
+						},
+						1200: {
+							slidesPerView: 4,
+							spaceBetween: 33,
+						},
+					},
+
+					on: {},
+				});
+			}
+		}
+
+		initTourPackagesSlider();
+		window.addEventListener('resize', initTourPackagesSlider);
 	}
 }
 

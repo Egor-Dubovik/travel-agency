@@ -1,6 +1,8 @@
 [data-fls-link] {
 	position: relative;
 	display: inline-flex;
+	width: max-content;
+	flex-wrap: nowrap;
 	flex-direction: row-reverse;
 	justify-content: flex-end;
 	align-items: center;

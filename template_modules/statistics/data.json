@@ -154,7 +154,12 @@
       {
         "date": "18.12.2025",
         "start": 1766027414316,
-        "end": 1766027414316
+        "end": 1766034518523
+      },
+      {
+        "date": "18.12.2025",
+        "start": 1766075889235,
+        "end": 1766075889235
       }
     ],
     "files": [
@@ -279,7 +284,13 @@
       "about.scss",
       "scroll.js",
       "tour-packages.html",
-      "tour-packages.scss"
+      "tour-packages.scss",
+      "new-page-link.html",
+      "new-page-link.js",
+      "new-page-link.scss",
+      "link.html",
+      "link.scss",
+      "link.js"
     ]
   }
 }
