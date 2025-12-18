@@ -93,8 +93,8 @@
 //*  ===========================
 
 .benefits {
-	@include adaptiveValue('padding-top', 83, 30, 0, $containerWidth, $mobileSmall);
-	@include adaptiveValue('padding-bottom', 83, 30, 0, $containerWidth, $mobileSmall);
+	@include adaptiveValue('padding-top', 83, 40, 0, $containerWidth, $mobileSmall);
+	@include adaptiveValue('padding-bottom', 83, 40, 0, $containerWidth, $mobileSmall);
 	background: url('@img/mainpage/bg.png') 0 0 / cover no-repeat;
 	// .benefits__container
 	&__container {

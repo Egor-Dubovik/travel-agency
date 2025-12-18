@@ -1,9 +1,41 @@
+.wrapper:has(main.--not-bg) header {
+	background: #fff;
+	border-bottom: 1px solid #efefef;
+	color: $mainColor;
+
+	.header__button {
+		color: #fff;
+		[data-fls-menu-open] & {
+			color: #fff;
+		}
+	}
+	a,
+	.button-text,
+	.select__title,
+	.select__option {
+		color: $mainColor;
+		[data-fls-menu-open] & {
+			color: #fff;
+		}
+	}
+
+	.icon-menu {
+		span,
+		&::after,
+		&::before {
+			background-color: $mainColor;
+			[data-fls-menu-open] & {
+				background-color: #fff;
+			}
+		}
+	}
+}
+
 .header {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-
 	z-index: 50;
 
 	// .header__container

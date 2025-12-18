@@ -1,0 +1,21 @@
+<template src="@components/templates/main/main.html" locals='{
+		"title":"Tour Packages", 
+		"lang":"en",
+		"preloader": {
+			"enable":"false",
+			"once":"false"
+		},
+		"keywords":"", 
+		"description":"Join us for an unforgettable journey through the heart of the city and its stunning surroundings, guided by a professional who knows the area inside and out. This tour is designed to unveil the rich history, vibrant culture, and picturesque landscapes that make this destination truly unique."
+	}'>
+	<block name="header">
+		<include src="@components/layout/header/header.html" locals='{"active":"tour-packages"}'></include>
+	</block>
+	<block name="main">
+		<include src="@components/pages/tour-packages/tour-packages.html" locals='{}'></include>
+	</block>
+	<block name="footer">
+		<include src="@components/layout/footer/footer.html" locals='{}'></include>
+	</block>
+	<block name="popup"></block>
+</template>

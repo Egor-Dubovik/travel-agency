@@ -1,0 +1,40 @@
+<script type="module" src="@components/pages/tour-packages/tour-packages.js"></script>
+<link rel="stylesheet" href="@components/pages/tour-packages/tour-packages.scss">
+<main class="page page--packages packages --not-bg">
+	<section class='packages__tour-packages tour-packages first-block--offset'>
+		<div class="tour-packages__container">
+			<h2 data-fls-title class="tour-packages__title title__secondary">Tour Packages</h2>
+			<div data-fls-slider class="tour-packages__slider swiper">
+				<div class="tour-packages__wrapper swiper-wrapper">
+					<each loop='tour in [
+					{	"title": "Cinque Terre Tour", "description": "Visiting the 5 Terre is a must, and you can never go there enough.", "img": "@img/tour-card/CinqueTerreTour.jpg", "people": "10-50", "coast": "34" },
+					{ "title": "Wine tasting in Tuscany", "description": "The real magic is here where you can enjoy the best Tuscan wine and eat.", "img": "@img/tour-card/WineTastingTuscany.jpg", "people": "10-30", "coast": "45" },
+					{	"title": "Siena and Surroundings", "description": "Visit the beautiful Siena and the cities that surround it to experience elit amet architecto recusandae quaerat, fuga!", "img": "@img/tour-card/SienaSurroundings.jpg", "people": "5-10", "coast": "34" },
+					{	"title": "Tour of the Lucca Hills", "description": "Visit with us the beautiful hills of Lucca, with a guide who will make good trip", "img": "@img/tour-card/TourLuccaHills.jpg", "people": "5-12", "coast": "34" },
+					{ "title": "Gardaland, Verona", "description": "Visit the largest and most fun park in Italy suitable for all of people", "img": "@img/tour-card/GardalandVerona.jpg", "people": "10-50", "coast": "34" },
+					{ "title": "Pisa & Lucca", "description": "Visiting the 5 Terre is a must, and you can never go there enough to arrive", "img": "@img/tour-card/PisaLucca.jpg", "people": "10-50", "coast": "34" },
+					{ "title": "Florence", "description": "Visit the beautiful Siena and the cities that surround it to experience", "img": "@img/tour-card/Florence.jpg", "people": "5-10", "coast": "34" },
+					{ "title": "Lucca Bike Tour", "description": "A tour of the city and its surroundings led by a professional guide.", "img": "@img/tour-card/LuccBikeTour.jpg", "people": "3-10", "coast": "34" }
+					]'>
+						<div class="tour-packages__slide swiper-slide">
+							<include src="@components/custom/productcard/productcard.html" locals='{
+									"class": "",
+									"title": "[[tour.title]]",
+									"description": "[[tour.description]]",
+									"img": "[[tour.img]]",
+									"people": "[[tour.people]]",
+									"coast": "[[tour.coast]]"
+								}'>
+						</div>
+					</each>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="packages__book-bike packages--block book-bike">
+		<include src="@components/custom/bookbike/bookbike.html"></include>
+	</section>
+	<section class="packages__comments-block packages--block comments-block">
+		<include src="@components/custom/comments-block/comments-block.html"></include>
+	</section>
+</main>

@@ -1,0 +1,49 @@
+.packages {
+	// .packages__tour-packages
+	&__tour-packages {
+	}
+	// .packages__book-bike
+	&__book-bike {
+	}
+	// .packages__comments-block
+	&__comments-block {
+	}
+	// .packages--block
+	&--block {
+		@include adaptiveValue('padding-top', 60, 40, 0, $containerWidth, $mobileSmall);
+		@include adaptiveValue('padding-bottom', 60, 40, 0, $containerWidth, $mobileSmall);
+	}
+}
+
+//*  ===========================
+//*   tour-packages
+//*  ===========================
+.tour-packages {
+	// .tour-packages__container
+	&__container {
+		@include adaptiveValue('padding-top', 100, 10);
+	}
+	// .tour-packages__title
+	&__title {
+		@include adaptiveValue('margin-bottom', 60, 30, 0, $containerWidth, $mobileSmall);
+	}
+	// .tour-packages__slider
+	&__slider {
+	}
+	// .tour-packages__wrapper
+	&__wrapper {
+		flex-wrap: wrap;
+		gap: 33px;
+	}
+	// .tour-packages__slide
+	&__slide {
+		flex: 1 0 calc(25% - 99px);
+		@media (max-width: toEm(1200)) {
+			flex: 0 0 calc(33.333% - 66px);
+		}
+
+		.productcard img {
+			max-width: 100%;
+		}
+	}
+}

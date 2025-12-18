@@ -277,7 +277,9 @@
       "digit-block.html",
       "digit-block.scss",
       "about.scss",
-      "scroll.js"
+      "scroll.js",
+      "tour-packages.html",
+      "tour-packages.scss"
     ]
   }
 }
