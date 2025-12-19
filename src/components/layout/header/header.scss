@@ -1,4 +1,4 @@
-.wrapper:has(main.--not-bg) header {
+.wrapper:has(main.--not-bg) .header {
 	background: #fff;
 	border-bottom: 1px solid #efefef;
 	color: $mainColor;

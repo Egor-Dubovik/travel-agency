@@ -19,47 +19,72 @@
 //*   tour-packages
 //*  ===========================
 .tour-packages {
+	&:has(.tour-packages__slider.swiper-initialized) {
+		.tour-packages__slider-buttons {
+			display: flex;
+		}
+	}
 	// .tour-packages__container
 	&__container {
 		@include adaptiveValue('padding-top', 100, 10);
 	}
+	// .tour-packages__header
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 10px;
+		@include adaptiveValue('margin-bottom', 60, 30, 0, $containerWidth, $mobileSmall);
+	}
+	// .tour-packages__slider-buttons
+	&__slider-buttons {
+		display: none;
+		gap: 20px;
+		@media (max-width: toEm($mobileSmall)) {
+			gap: 10px;
+		}
+	}
 	// .tour-packages__title
 	&__title {
-		@include adaptiveValue('margin-bottom', 60, 30, 0, $containerWidth, $mobileSmall);
 	}
 	// .tour-packages__slider
 	&__slider {
+		// Пока swiper НЕ инициализирован
+		&:not(.swiper-initialized) {
+			.tour-packages__wrapper {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 33px;
+
+				@media (max-width: toEm(1199.98)) {
+					gap: 20px;
+				}
+			}
+
+			.tour-packages__slide {
+				flex: 0 0 calc((100% - 99px) / 4);
+
+				@media (max-width: toEm(1199.98)) {
+					flex: 0 0 calc((100% - 40px) / 3);
+				}
+
+				@media (max-width: toEm($tablet)) {
+					flex: 0 0 calc((100% - 20px) / 2);
+				}
+
+				@media (max-width: toEm($mobileSmall)) {
+					flex: 0 0 100%;
+				}
+			}
+		}
 	}
 	// .tour-packages__wrapper
 	&__wrapper {
 		display: flex;
-		// flex-wrap: wrap;
-		// gap: 33px;
-		// @media (max-width: toEm(1199.98)) {
-		// 	gap: 20px;
-		// }
 	}
 	// .tour-packages__slide
 	&__slide {
-		// flex: 0 0 calc((100% - 99px) / 4);
-		// @media (max-width: toEm(1199.98)) {
-		// 	flex: 0 0 calc((100% - 40px) / 3);
-		// }
-		// @media (max-width: toEm($tablet)) {
-		// 	flex: 0 0 calc((100% - 20px) / 2);
-		// }
-		// @media (max-width: toEm($mobileSmall)) {
-		// 	flex: 0 0 100%;
-		// }
 	}
-}
-
-.packages {
-	// .packages__services
-	&__services {
-	}
-}
-.packages--block {
 }
 
 //*  ===========================

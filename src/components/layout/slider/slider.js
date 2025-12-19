@@ -156,8 +156,8 @@ function initSliders() {
 					speed: 800,
 					lazyPreloadPrevNext: 1,
 					navigation: {
-						prevEl: '.comments-block__slider-button-prev',
-						nextEl: '.comments-block__slider-button-next',
+						prevEl: '.tour-packages__slider-button-prev',
+						nextEl: '.tour-packages__slider-button-next',
 					},
 					keyboard: {
 						enabled: true,

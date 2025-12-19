@@ -3,7 +3,13 @@
 <main class="page page--packages packages --not-bg">
 	<section class='packages__tour-packages tour-packages first-block--offset'>
 		<div class="tour-packages__container">
-			<h2 data-fls-title class="tour-packages__title title__secondary">Tour Packages</h2>
+			<header class="tour-packages__header">
+				<h2 data-fls-title class="tour-packages__title title__secondary">Tour Packages</h2>
+				<div class="tour-packages__slider-buttons">
+					<button type="button" class="tour-packages__slider-button tour-packages__slider-button-prev swiper-button swiper-button-prev"></button>
+					<button type="button" class="tour-packages__slider-button tour-packages__slider-button-next swiper-button swiper-button-next"></button>
+				</div>
+			</header>
 			<div data-fls-slider class="tour-packages__slider swiper">
 				<div class="tour-packages__wrapper swiper-wrapper">
 					<each loop='tour in [
