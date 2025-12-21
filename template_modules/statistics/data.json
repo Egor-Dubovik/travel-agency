@@ -320,7 +320,9 @@
       "map.js",
       "contacts.html",
       "map.scss",
-      "contacts.scss"
+      "contacts.scss",
+      "account.html",
+      "account.scss"
     ]
   }
 }

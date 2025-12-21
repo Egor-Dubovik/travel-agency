@@ -68,6 +68,50 @@ function initSliders() {
 			on: {},
 		});
 	}
+	if (document.querySelector('.account__slider')) {
+		new Swiper('.account__slider', {
+			modules: [Navigation, Keyboard],
+			slidesPerView: 4,
+			spaceBetween: 30,
+			speed: 800,
+			lazyPreloadPrevNext: 1,
+			navigation: {
+				prevEl: '.account__slider-button-prev',
+				nextEl: '.account__slider-button-next',
+			},
+			keyboard: {
+				enabled: true,
+				onlyInViewport: true,
+				pageUpDown: true,
+			},
+
+			breakpoints: {
+				260: {
+					slidesPerView: 1,
+					spaceBetween: 15,
+				},
+				560: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				680: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				1030: {
+					slidesPerView: 4,
+					spaceBetween: 20,
+				},
+				1400: {
+					spaceBetween: 30,
+				},
+			},
+
+			// Події
+			on: {},
+		});
+	}
+
 	if (document.querySelector('.comments-block__slider')) {
 		new Swiper('.comments-block__slider', {
 			modules: [Navigation, Keyboard],

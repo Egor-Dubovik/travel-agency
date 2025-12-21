@@ -1,0 +1,248 @@
+.account {
+	&--block {
+		@include adaptiveValue('padding-top', 60, 30, 0, $containerWidth, $mobileSmall);
+		@include adaptiveValue('padding-bottom', 60, 30, 0, $containerWidth, $mobileSmall);
+	}
+
+	// .account__packages
+	&__packages {
+	}
+	// .account__container
+	&__container {
+	}
+	// .account__header
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 10px;
+		@include adaptiveValue('margin-bottom', 57, 20, 0, $containerWidth, $mobileSmall);
+	}
+	// .account__title
+	&__title {
+	}
+	// .account__slider-buttons
+	&__slider-buttons {
+		display: flex;
+		gap: 20px;
+		@media (max-width: toEm($mobileSmall)) {
+			gap: 10px;
+		}
+	}
+	// .account__slider-button
+	&__slider-button {
+		flex: 0 50px;
+		@media (max-width: toEm($mobileSmall)) {
+			flex: 0 0 45px;
+			height: 45px;
+		}
+	}
+	// .account__slider-button-prev
+	&__slider-button-prev {
+	}
+	// .account__slider-button-next
+	&__slider-button-next {
+	}
+	// .account__slider
+	&__slider {
+	}
+	// .account__wrapper
+	&__wrapper {
+	}
+	// .account__slide
+	&__slide {
+	}
+}
+
+// My Tickets Section
+.tickets {
+	@media (max-width: toEm($mobile)) {
+		padding-bottom: 20px;
+	}
+	&__container {
+		@include adaptiveValue('padding-top', 90, 10, 0, $containerWidth, $mobileSmall);
+	}
+
+	&__title {
+		margin-bottom: 30px;
+		@media (max-width: toEm($mobileSmall)) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__table {
+		background: #fff;
+		border: 1px solid #efefef;
+		border-radius: 24px;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+		overflow: hidden;
+
+		@media (min-width: toEm(560)) {
+			overflow-x: auto;
+		}
+	}
+
+	&__header {
+		display: flex;
+		background: #f8f9fa;
+		border-bottom: 1px solid #e9ecef;
+		padding: 15px 20px;
+
+		@media (max-width: toEm($tablet)) {
+			min-width: 800px;
+		}
+		@media (max-width: toEm(560)) {
+			display: none;
+		}
+	}
+}
+
+.ticket {
+	&__col {
+		text-align: center;
+		flex: 1;
+		@include adaptiveValue('font-size', 20, 16);
+		line-height: math.div(20, 18);
+		font-weight: 600;
+		color: rgba(51, 51, 51, 0.6);
+
+		&--tour {
+			flex: 2;
+			text-align: left;
+		}
+
+		&--method {
+			flex: 1;
+		}
+
+		&--price {
+			flex: 1;
+		}
+
+		&--status {
+			flex: 1;
+		}
+	}
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		padding: 20px;
+		border-bottom: 1px solid #e9ecef;
+		gap: 15px;
+
+		@media (max-width: toEm($tablet)) {
+			min-width: 800px;
+			flex-wrap: nowrap;
+		}
+		@media (max-width: toEm(560)) {
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 15px;
+		}
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+
+	&__info {
+		flex: 2;
+		display: flex;
+		@include adaptiveValue('gap', 15, 10);
+
+		@media (max-width: toEm(560)) {
+			flex-direction: row;
+			width: 100%;
+		}
+	}
+
+	&__img {
+		aspect-ratio: 160 / 110;
+		width: 100%;
+		@include adaptiveValue('max-width', 160, 80);
+		height: 100%;
+		object-fit: cover;
+		border-radius: 12px;
+		@media (max-width: toEm(1100)) {
+			aspect-ratio: 1 / 1;
+		}
+	}
+
+	&__details {
+		flex: 1;
+	}
+
+	&__name {
+		@include adaptiveValue('margin-bottom', 14, 12);
+		@include adaptiveValue('font-size', 24, 15, 0, $containerWidth, $mobileSmall);
+	}
+
+	&__date-time {
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue('gap', 14, 12);
+		span {
+			display: flex;
+			align-items: center;
+			@include adaptiveValue('gap', 10, 5);
+			@include adaptiveValue('font-size', 18, 16);
+			text-transform: uppercase;
+			&::before {
+				flex: 0 0 24px;
+				height: 24px;
+				font-size: toRem(24);
+				color: $primary;
+			}
+		}
+	}
+
+	&__payment {
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include adaptiveValue('gap', 10, 5);
+
+		@media (max-width: toEm(560)) {
+			order: 3;
+			width: 100%;
+			justify-content: flex-start;
+		}
+	}
+
+	&__price {
+		flex: 1;
+		text-align: right;
+		font-weight: 600;
+		text-align: center;
+
+		@media (max-width: toEm(560)) {
+			text-align: left;
+		}
+	}
+
+	&__status {
+		flex: 1;
+
+		span {
+			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			@include adaptiveValue('gap', 10, 6);
+		}
+		&::before {
+			flex: 0 0 24px;
+			height: 24px;
+			font-size: 24px;
+		}
+		.--icon-ended::before {
+			color: #28a745;
+		}
+		.--icon-upcoming::before {
+			color: $primary;
+		}
+	}
+}
