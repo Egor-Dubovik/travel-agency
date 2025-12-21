@@ -1,0 +1,44 @@
+<script type="module" src="@components/pages/contacts/contacts.js"></script>
+<link rel="stylesheet" href="@components/pages/contacts/contacts.scss">
+<main class="page page--contacts --not-bg">
+	<section class="get-touch first-block--offset">
+		<div class="get-touch__container">
+			<div class="get-touch__content">
+				<h1 data-fls-title class='get-touch__title title__primary'>Get In Touch!</h1>
+				<div class="get-touch__descripton">
+					<p>Fill up the form and our Team will get back to you within 24 hours.</p>
+				</div>
+				<ul class="get-touch__links-list">
+					<li class="get-touch__link-item"><a class='--icon-location' href="https://www.google.com/maps/place/Piazza+Napoleone/@43.8413158,10.4999005,17z/data=!3m1!4b1!4m6!3m5!1s0x12d5838a3eaeea65:0x43e725ce10ef59f5!8m2!3d43.841312!4d10.5024754!16s%2Fg%2F121tbxk0?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">Piazza Napoleone, Lucca, Tuscany</a></li>
+					<li class="get-touch__link-item"><a class='--icon-mail' href="mailto:italiainlimo@gmail.com">italiainlimo@gmail.com</a></li>
+					<li class="get-touch__link-item"><a class='--icon-phone' href="tel:+393463685708">+39 346 368 5708</a></li>
+				</ul>
+			</div>
+			<form class='form get-touch__form form-get-touch' data-fls-form="dev" data-fls-form-popup="#" method="POST" action="php/sendmail" method="POST">
+				<label class='form-get-touch__input-wrapper input-wrapper'>
+					<span>Name and Surname</span>
+					<div class='form-get-touch__field form-field'>
+						<input data-fls-input required type="text" name="get-touch[name]" data-fls-form-errtext="Name required" placeholder="Enter your name and surname" class="form-get-touch__input input">
+					</div>
+				</label>
+				<label class='form-get-touch__input-wrapper input-wrapper'>
+					<span>Email Address</span>
+					<div class='form-get-touch__field form-field'>
+						<input data-fls-input required type="email" name="get-touch[email]" data-fls-form-errtext="Enter a correct email" placeholder="Enter your email address" class="form-get-touch__input input">
+					</div>
+				</label>
+				<label class='form-get-touch__input-wrapper input-wrapper'>
+					<span>Message</span>
+					<div class='form-get-touch__field form-field'>
+						<textarea data-fls-input type="email" name="get-touch[message]" placeholder="Enter your Message" class="form-get-touch__textarea input"></textarea>
+					</div>
+				</label>
+				<button data-fls-button type="submit" class="form-get-touch__button button">Send Message</button>
+			</form>
+		</div>
+	</section>
+	<div data-fls-map class="map">
+		<div data-fls-map-marker class="map__marker" data-fls-map-lat="50.449688" data-fls-map-lng="30.52348" data-fls-map-title="Title 1"></div>
+		<div data-fls-map-body class="map__body" data-fls-map-lat="50.449688" data-fls-map-lng="30.52348"></div>
+	</div>
+</main>

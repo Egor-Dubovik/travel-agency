@@ -1,0 +1,102 @@
+.get-touch {
+	background: url('@img/mainpage/bg.png') 0 0 / cover no-repeat;
+	// .get-touch__container
+	&__container {
+		@include adaptiveValue('padding-top', 80, 10, 0, $containerWidth, $mobileSmall);
+		display: flex;
+		justify-content: space-between;
+		gap: 30px;
+		@media (max-width: toEm($mobile)) {
+			flex-direction: column;
+			align-items: stretch;
+			.get-touch__content,
+			.get-touch__form {
+				flex: 1 1 100%;
+				min-width: 100%;
+			}
+		}
+	}
+	// .get-touch__content
+	&__content {
+		flex: 0 0 percent(365, $maxWidthContainer);
+		@media (max-width: toEm($containerWidth)) {
+			flex-grow: 1;
+		}
+	}
+	// .get-touch__form
+	&__form {
+		flex: 0 0 percent(698, $maxWidthContainer);
+		background: rgba(255, 255, 255, 0.3);
+		@include adaptiveValue('padding', 30, 10);
+	}
+	// .get-touch__title
+	&__title {
+		margin-bottom: 16px;
+	}
+	// .get-touch__descripton
+	&__descripton {
+		margin-bottom: 32px;
+		@media (min-width: toEm($mobile)) {
+			max-width: 360px;
+		}
+	}
+	// .get-touch__links-list
+	&__links-list {
+		li:not(:last-child) {
+			@include adaptiveValue('margin-bottom', 40, 20);
+		}
+	}
+	// .get-touch__link-item
+	&__link-item {
+		@include adaptiveValue('padding', 16, 0, 0, $containerWidth, $tablet);
+		border-radius: 12px;
+		border: 1px solid rgba(250, 138, 2, 0);
+		transition: all 0.3s;
+		a {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			&::before {
+				text-align: center;
+				align-items: center;
+				font-size: 24px;
+				flex: 0 0 24px;
+				height: 24px;
+				color: $primary;
+			}
+		}
+		@media (any-hover: hover) and (any-pointer: fine) {
+			&:hover {
+				border: 1px solid #fa8b02;
+				background-color: rgba(250, 139, 2, 0.2);
+			}
+		}
+	}
+}
+
+.form-get-touch {
+	// .form-get-touch__input-wrapper
+	&__input-wrapper {
+		span {
+			opacity: 1;
+		}
+	}
+	// .form-get-touch__field
+	&__field {
+	}
+	// .form-get-touch__input
+	&__input {
+	}
+	// .form-get-touch__textarea
+	&__textarea {
+		@include adaptiveValue('min-height', 150, 120);
+	}
+	// .form-get-touch__button
+	&__button.button {
+		width: max-content;
+		margin: 0 auto;
+		@media (max-width: toEm($mobileSmall)) {
+			width: 100%;
+		}
+	}
+}

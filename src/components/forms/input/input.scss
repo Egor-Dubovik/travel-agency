@@ -20,11 +20,13 @@ textarea {
 	background: #fff;
 	font-size: 16px;
 	transition: border-color 0.5s;
-
 	@media (max-width: toEm($mobileSmall)) {
 		padding: 8px 14px;
 	}
 
+	&::placeholder {
+		color: $mainColor;
+	}
 	&.--form-focus {
 		outline: 1px solid $primary;
 	}
@@ -44,7 +46,6 @@ textarea {
 
 textarea.input {
 	resize: vertical;
-	padding: 0px 0px;
 }
 
 [data-fls-input-viewpass] {
