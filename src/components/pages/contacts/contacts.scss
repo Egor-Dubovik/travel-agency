@@ -3,6 +3,8 @@
 	// .get-touch__container
 	&__container {
 		@include adaptiveValue('padding-top', 80, 10, 0, $containerWidth, $mobileSmall);
+		@include adaptiveValue('padding-bottom', 30, 0, 0, $containerWidth, $mobileSmall);
+
 		display: flex;
 		justify-content: space-between;
 		gap: 30px;
@@ -107,4 +109,7 @@
 .contacts-map__body {
 	max-height: 695px;
 	width: 100%;
+	@media (max-width: toEm($mobile)) {
+		aspect-ratio: 3 / 4;
+	}
 }
