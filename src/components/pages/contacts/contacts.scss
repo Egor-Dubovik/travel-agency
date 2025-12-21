@@ -29,7 +29,8 @@
 	&__form {
 		flex: 0 0 percent(698, $maxWidthContainer);
 		background: rgba(255, 255, 255, 0.3);
-		@include adaptiveValue('padding', 30, 10);
+		@include adaptiveValue('padding-inline', 30, 10);
+		@include adaptiveValue('padding-block', 30, 20);
 	}
 	// .get-touch__title
 	&__title {
@@ -45,19 +46,19 @@
 	// .get-touch__links-list
 	&__links-list {
 		li:not(:last-child) {
-			@include adaptiveValue('margin-bottom', 40, 20);
+			margin-bottom: 20px;
 		}
 	}
 	// .get-touch__link-item
 	&__link-item {
-		@include adaptiveValue('padding', 16, 0, 0, $containerWidth, $tablet);
-		border-radius: 12px;
-		border: 1px solid rgba(250, 138, 2, 0);
-		transition: all 0.3s;
 		a {
 			display: flex;
 			align-items: center;
 			gap: 10px;
+			@include adaptiveValue('padding', 16, 0, 0, $containerWidth, $tablet);
+			border-radius: 12px;
+			border: 1px solid rgba(250, 138, 2, 0);
+			transition: all 0.3s;
 			&::before {
 				text-align: center;
 				align-items: center;
@@ -66,11 +67,11 @@
 				height: 24px;
 				color: $primary;
 			}
-		}
-		@media (any-hover: hover) and (any-pointer: fine) {
-			&:hover {
-				border: 1px solid #fa8b02;
-				background-color: rgba(250, 139, 2, 0.2);
+			@media (any-hover: hover) and (any-pointer: fine) {
+				&:hover {
+					border: 1px solid #fa8b02;
+					background-color: rgba(250, 139, 2, 0.2);
+				}
 			}
 		}
 	}
