@@ -1,11 +1,11 @@
 // Підключення функціоналу "Чертоги Фрілансера"
-import { FLS } from "@js/common/functions.js";
+import { FLS } from '@js/common/functions.js';
 // Підключення доповнення
-import { Loader } from '@googlemaps/js-api-loader';
+// Removed Loader import since we're using the new functional API
 // Підключення налаштувань
 import { MAP_STYLES, BREAKPOINTS, MAP_KEY } from './_settings.js';
 
-import './map.scss'
+import './map.scss';
 
 function mapInit() {
 	const SELECTORS = {
@@ -15,21 +15,50 @@ function mapInit() {
 	};
 	const $sections = document.querySelectorAll(SELECTORS.section);
 	if (!$sections.length) return;
-	const loadMap = async (onLoad) => {
-		const loader = new Loader({
-			apiKey: MAP_KEY,
-			version: 'weekly',
-			libraries: ['places'],
-		});
-		try {
-			const { Map } = await loader.importLibrary('maps');
-			const { AdvancedMarkerElement } = await loader.importLibrary('marker');
-			const Core = await loader.importLibrary('core');
-			onLoad({ Map, AdvancedMarkerElement, Core });
-		} catch (e) {
-			FLS('_FLS_MAP_ERROR');
-			console.log(e);
+	// Function to load Google Maps API with the new functional API
+	const loadMap = async onLoad => {
+		// Check if Google Maps API is already loaded
+		if (window.google && window.google.maps) {
+			try {
+				const { Map } = await google.maps.importLibrary('maps');
+				// const { AdvancedMarkerElement } = await google.maps.importLibrary('marker');
+				const { LatLng } = await google.maps.importLibrary('core');
+				onLoad({ Map, Core: { LatLng } });
+			} catch (e) {
+				FLS('_FLS_MAP_ERROR');
+				console.log(e);
+			}
+			return;
 		}
+
+		// If not loaded, create a Promise that resolves when the API loads
+		return new Promise((resolve, reject) => {
+			// Define a callback function to be called when the API loads
+			window.initMap = async () => {
+				try {
+					const { Map } = await google.maps.importLibrary('maps');
+					// const { AdvancedMarkerElement } = await google.maps.importLibrary('marker');
+					const { LatLng } = await google.maps.importLibrary('core');
+					onLoad({ Map, Core: { LatLng } });
+					resolve();
+				} catch (e) {
+					FLS('_FLS_MAP_ERROR');
+					console.log(e);
+					reject(e);
+				}
+			};
+
+			// Add the Google Maps script to the page with the API key
+			const script = document.createElement('script');
+			script.src = `https://maps.googleapis.com/maps/api/js?key=${MAP_KEY}&libraries=places&callback=initMap`;
+			script.async = true;
+			script.defer = true;
+			script.onerror = () => {
+				reject(new Error('Failed to load Google Maps API'));
+				FLS('_FLS_MAP_ERROR');
+			};
+			document.head.appendChild(script);
+		});
 	};
 	const initMap = async ({ api, lng, lat, markersData, zoom, maxZoom, $map }) => {
 		const mapOptions = {
@@ -42,7 +71,7 @@ function mapInit() {
 				lng,
 			},
 			disableDefaultUI: true,
-			mapId: "DEMO_MAP_ID"
+			// mapId: 'DEMO_MAP_ID',
 		};
 
 		const map = new api.Map($map, mapOptions);
@@ -51,41 +80,49 @@ function mapInit() {
 		const markerMobileSize = { width: 30, height: 42 };
 
 		// Розмір маркерів
-		const markerSize = window.innerWidth < BREAKPOINTS.tablet ? markerMobileSize : markerDesktopSize;
+		const markerSize =
+			window.innerWidth < BREAKPOINTS.tablet ? markerMobileSize : markerDesktopSize;
 		const markers = await markersData.map(({ lat, lng, icon, title, markerZoom, markerPopup }) => {
-			let image
+			let image;
 			if (icon) {
-				image = document.createElement("img")
-				image.src = icon
+				image = document.createElement('img');
+				image.src = icon;
 			}
-			const marker = new api.AdvancedMarkerElement({
+
+			const marker = new google.maps.Marker({
+				position: { lat, lng },
 				map,
-				title: title,
-				gmpClickable: true,
-				position: new api.Core.LatLng(lat, lng),
-				content: icon ? image : null,
+				icon: {
+					url: icon,
+					scaledSize: new google.maps.Size(36, 48),
+					anchor: new google.maps.Point(16, 48),
+				},
 			});
 
-			marker.addEventListener('gmp-click', () => {
-				markerZoom.enable ? map.setZoom(+markerZoom.value || 10) : null
-				if (markerPopup.enable && window.flsPopup) {
-					window.flsPopup.open(markerPopup.value)
+			marker.addListener('click', () => {
+				if (markerZoom.enable) {
+					map.setZoom(+markerZoom.value || 10);
 				}
-				map.panTo(marker.position)
-			})
+
+				if (markerPopup.enable && window.flsPopup) {
+					window.flsPopup.open(markerPopup.value);
+				}
+
+				map.panTo(marker.getPosition());
+			});
 
 			return marker;
 		});
 		return map;
 	};
-	loadMap((api) => {
-		$sections.forEach(($section) => {
+	loadMap(api => {
+		$sections.forEach($section => {
 			const $maps = $section.querySelectorAll(SELECTORS.map);
 			if (!$maps.length) return;
 
-			$maps.forEach(($map) => {
+			$maps.forEach($map => {
 				const $markers = $map.parentElement.querySelectorAll(SELECTORS.marker);
-				const markersData = Array.from($markers).map(($marker) => ({
+				const markersData = Array.from($markers).map($marker => ({
 					lng: parseFloat($marker.dataset.flsMapLng) || 0,
 					lat: parseFloat($marker.dataset.flsMapLat) || 0,
 					icon: $marker.dataset.flsMapIcon,
@@ -97,7 +134,7 @@ function mapInit() {
 					markerPopup: {
 						enable: $marker.hasAttribute('data-fls-map-marker-popup'),
 						value: $marker.dataset.flsMapMarkerPopup,
-					}
+					},
 				}));
 				const map = initMap({
 					api,
@@ -112,5 +149,4 @@ function mapInit() {
 		});
 	});
 }
-document.querySelector('[data-fls-map]') ?
-	window.addEventListener('load', mapInit) : null
+document.querySelector('[data-fls-map]') ? window.addEventListener('load', mapInit) : null;

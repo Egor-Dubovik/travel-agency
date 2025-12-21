@@ -1,7 +1,7 @@
 @font-face { 
 	font-family: "iconfont"; 
 	font-display: swap;
-	src: url("D://WEB/FULL/front-end/_java-sript/projects/seites/travel-agency/src/assets/svgicons/preview/iconfont.woff2?29ed640f55d17b0c78f08fb682e46251") format("woff2"); 
+	src: url("D://WEB/FULL/front-end/_java-sript/projects/seites/agency/travel-agency/src/assets/svgicons/preview/iconfont.woff2?c211de6274a7016ebba5232ffb0c97f7") format("woff2"); 
 } 
 [class*="--icon-"]::before{
 	font-family: iconfont; 

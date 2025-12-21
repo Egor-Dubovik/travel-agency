@@ -1,17 +1,35 @@
-export const MAP_KEY = ``
+export const MAP_KEY = `AIzaSyDo0TQ99HPNuUMKcslEh-0avVfS82brcWs`;
 export const BREAKPOINTS = {
 	tablet: 991.98,
 	mobile: 767.98,
 	smallMobile: 479.98,
 	xsMobile: 320,
-}
+};
 export const MAP_STYLES = [
 	{
-		featureType: 'administrative',
-		elementType: 'labels.text.fill',
+		featureType: 'all',
+		elementType: 'geometry.fill',
 		stylers: [
 			{
-				color: '#B1AEAE',
+				weight: '2.00',
+			},
+		],
+	},
+	{
+		featureType: 'all',
+		elementType: 'geometry.stroke',
+		stylers: [
+			{
+				color: '#9c9c9c',
+			},
+		],
+	},
+	{
+		featureType: 'all',
+		elementType: 'labels.text',
+		stylers: [
+			{
+				visibility: 'on',
 			},
 		],
 	},
@@ -20,13 +38,40 @@ export const MAP_STYLES = [
 		elementType: 'all',
 		stylers: [
 			{
-				color: '#E5E2E2',
+				color: '#f2f2f2',
+			},
+		],
+	},
+	{
+		featureType: 'landscape',
+		elementType: 'geometry.fill',
+		stylers: [
+			{
+				color: '#ffffff',
+			},
+		],
+	},
+	{
+		featureType: 'landscape.man_made',
+		elementType: 'geometry.fill',
+		stylers: [
+			{
+				color: '#ffffff',
 			},
 		],
 	},
 	{
 		featureType: 'poi',
-		elementType: 'labels.icon',
+		elementType: 'all',
+		stylers: [
+			{
+				visibility: 'off',
+			},
+		],
+	},
+	{
+		featureType: 'road',
+		elementType: 'all',
 		stylers: [
 			{
 				saturation: -100,
@@ -37,29 +82,11 @@ export const MAP_STYLES = [
 		],
 	},
 	{
-		featureType: 'poi',
-		elementType: 'labels.text',
-		stylers: [
-			{
-				visibility: 'off',
-			},
-		],
-	},
-	{
 		featureType: 'road',
 		elementType: 'geometry.fill',
 		stylers: [
 			{
-				color: '#D6D3D3',
-			},
-		],
-	},
-	{
-		featureType: 'road',
-		elementType: 'geometry.stroke',
-		stylers: [
-			{
-				color: '#CECBCB',
+				color: '#eeeeee',
 			},
 		],
 	},
@@ -68,7 +95,7 @@ export const MAP_STYLES = [
 		elementType: 'labels.text.fill',
 		stylers: [
 			{
-				color: '#B0AEAE',
+				color: '#7b7b7b',
 			},
 		],
 	},
@@ -77,7 +104,7 @@ export const MAP_STYLES = [
 		elementType: 'labels.text.stroke',
 		stylers: [
 			{
-				color: '#E4E1E1',
+				color: '#ffffff',
 			},
 		],
 	},
@@ -87,9 +114,6 @@ export const MAP_STYLES = [
 		stylers: [
 			{
 				visibility: 'simplified',
-			},
-			{
-				saturation: -100,
 			},
 		],
 	},
@@ -107,13 +131,7 @@ export const MAP_STYLES = [
 		elementType: 'all',
 		stylers: [
 			{
-				visibility: 'on',
-			},
-			{
-				saturation: -100,
-			},
-			{
-				lightness: 50,
+				visibility: 'off',
 			},
 		],
 	},
@@ -122,10 +140,37 @@ export const MAP_STYLES = [
 		elementType: 'all',
 		stylers: [
 			{
-				color: '#D0CDCD',
+				color: '#46bcec',
 			},
 			{
 				visibility: 'on',
+			},
+		],
+	},
+	{
+		featureType: 'water',
+		elementType: 'geometry.fill',
+		stylers: [
+			{
+				color: '#c8d7d4',
+			},
+		],
+	},
+	{
+		featureType: 'water',
+		elementType: 'labels.text.fill',
+		stylers: [
+			{
+				color: '#070707',
+			},
+		],
+	},
+	{
+		featureType: 'water',
+		elementType: 'labels.text.stroke',
+		stylers: [
+			{
+				color: '#ffffff',
 			},
 		],
 	},
