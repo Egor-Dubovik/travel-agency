@@ -1,0 +1,89 @@
+<script type="module" src="@components/pages/tour-detail/tour-detail.js"></script>
+<link rel="stylesheet" href="@components/pages/tour-detail/tour-detail.scss">
+<main class="page page--tour-detail tour-detail --not-bg">
+	<nav class="tour-detail__nav tour-nav first-block--offset">
+		<div class="tour-nav__container">
+			<button data-fls-button class='tour-nav__button button-text --icon-long_back_arrow'>Back</button>
+		</div>
+	</nav>
+	<section class="tour-detail__main-info tour-main-info">
+		<div class="tour-main-info__container">
+			<div data-fls-slider class="tour-main-info__sliders">
+				<div class="tour-main-info__slider swiper">
+					<div class="tour-main-info__swiper swiper-wrapper">
+						<div class="tour-main-info__slide swiper-slide">
+							<img src="@img/tours/WineTuscany/1.jpg" alt="slider image" />
+						</div>
+						<div class="tour-main-info__slide swiper-slide">
+							<img src="@img/tours/WineTuscany/2.jpg" alt="slider image" />
+						</div>
+						<div class="tour-main-info__slide swiper-slide">
+							<img src="@img/tours/WineTuscany/3.jpg" alt="slider image" />
+						</div>
+						<div class="tour-main-info__slide swiper-slide">
+							<img src="@img/tours/WineTuscany/4.jpg" alt="slider image" />
+						</div>
+						<div class="tour-main-info__slide swiper-slide">
+							<img src="@img/tours/WineTuscany/5.jpg" alt="slider image" />
+						</div>
+						<div class="tour-main-info__slide swiper-slide">
+							<img src="@img/tours/WineTuscany/6.jpg" alt="slider image" />
+						</div>
+					</div>
+				</div>
+				<div class="tour-main-info__thumbs tour-thumbs-images swiper">
+					<div class="tour-thumbs-images__swiper swiper-wrapper">
+						<div class="tour-thumbs-images__slide swiper-slide">
+							<img src="@img/tours/WineTuscany/1.jpg" alt="thumb slider image" />
+						</div>
+						<div class="tour-thumbs-images__slide swiper-slide">
+							<img src="@img/tours/WineTuscany/2.jpg" alt="thumb slider image" />
+						</div>
+						<div class="tour-thumbs-images__slide swiper-slide">
+							<img src="@img/tours/WineTuscany/3.jpg" alt="thumb slider image" />
+						</div>
+						<div class="tour-thumbs-images__slide swiper-slide">
+							<img src="@img/tours/WineTuscany/4.jpg" alt="thumb slider image" />
+						</div>
+						<div class="tour-thumbs-images__slide swiper-slide">
+							<img src="@img/tours/WineTuscany/5.jpg" alt="thumb slider image" />
+						</div>
+						<div class="tour-thumbs-images__slide swiper-slide">
+							<img src="@img/tours/WineTuscany/6.jpg" alt="thumb slider image" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tour-main-info__content">
+				<h1 data-fls-title class='tour-main-info__title title__primary'>Wine tasting In Tuscany</h1>
+				<div class="tour-main-info__coast">
+					<p>from</p>
+					<span class='--icon-euro'>34</span>
+				</div>
+				<div class="tour-main-info__description">
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+				</div>
+				<form id='tour-form' class='tour-main-info__form tour-form' data-fls-form="dev" method="POST" action="php/sendmail" method="POST">
+					<div class="tour-form__field tour-form__field--date">
+						<span>Select a date</span>
+						<label class='datepicker-wrapper'>
+							<input data-fls-datepicker autocomplete="off" type="text" name="tour-form[date]" data-error="Chose date" placeholder='Date' class="datepicker">
+						</label>
+					</div>
+					<div class="tour-form__field tour-form__field--time">
+						<span>Time</span>
+						<select data-fls-select class='select--bg' name="tour-form[time]" data-error="Chose time">
+							<option value="" disabled selected hidden>Choose Time</option>
+							<option value="13:00">1:00 am</option>
+							<option value="14:00">2:00 am</option>
+							<option value="15:00">3:00 am</option>
+							<option value="16:00">4:00 am</option>
+							<option value="17:00">5:00 am</option>
+						</select>
+					</div>
+					<button type="submit" class="button">Buy Now</button>
+				</form>
+			</div>
+		</div>
+	</section>
+</main>

@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation, Keyboard } from 'swiper/modules';
+import { Navigation, Keyboard, Autoplay, Thumbs, Pagination } from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -111,7 +111,6 @@ function initSliders() {
 			on: {},
 		});
 	}
-
 	if (document.querySelector('.comments-block__slider')) {
 		new Swiper('.comments-block__slider', {
 			modules: [Navigation, Keyboard],
@@ -234,6 +233,49 @@ function initSliders() {
 
 		initTourPackagesSlider();
 		window.addEventListener('resize', initTourPackagesSlider);
+	}
+	if (document.querySelector('.tour-main-info__thumbs')) {
+		const thumbsSwiper = new Swiper('.tour-main-info__thumbs', {
+			modules: [Navigation, Pagination, Autoplay, Thumbs],
+			//effect: 'fade',
+			observer: true,
+			watchOverflow: true,
+			observeParents: true,
+			slidesPerView: 4,
+			spaceBetween: 16,
+			parallax: true,
+			speed: 800,
+			//autoHeight: true,
+			//touchRatio: 0,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			breakpoints: {
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+			},
+		});
+		new Swiper('.tour-main-info__slider', {
+			modules: [Navigation, Pagination, Autoplay, Thumbs],
+			//effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			thumbs: {
+				swiper: thumbsSwiper,
+			},
+			observer: true,
+			watchOverflow: true,
+			observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 30,
+			speed: 800,
+		});
 	}
 }
 

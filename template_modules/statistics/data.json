@@ -328,7 +328,9 @@
       "contacts.scss",
       "account.html",
       "account.scss",
-      "account.js"
+      "account.js",
+      "tour-detail.html",
+      "tour-detail.scss"
     ]
   }
 }
