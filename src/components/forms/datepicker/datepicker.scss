@@ -18,6 +18,11 @@
 			rotate: 180deg;
 		}
 	}
+	&[data-datepicker-open] {
+		&::before {
+			display: none;
+		}
+	}
 }
 .datepicker {
 	width: 100%;
@@ -28,6 +33,9 @@
 	}
 	&::placeholder {
 		color: rgba(51, 51, 51, 0.8);
+	}
+	[data-datepicker-open] & {
+		display: none;
 	}
 }
 
@@ -51,6 +59,13 @@
 	border-radius: 0 0 12px 12px;
 	padding: 10px;
 	box-shadow: 0px 2px 3px 0px rgb(51, 51, 51, 0.4);
+	[data-datepicker-open] & {
+		position: static !important;
+		@include adaptiveValue('padding', 20, 10);
+		border: 1px solid rgba(51, 51, 51, 0.2);
+		border-radius: 12px;
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0);
+	}
 }
 .qs-datepicker-container * {
 	-webkit-box-sizing: border-box;

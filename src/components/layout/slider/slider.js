@@ -237,23 +237,19 @@ function initSliders() {
 	if (document.querySelector('.tour-main-info__thumbs')) {
 		const thumbsSwiper = new Swiper('.tour-main-info__thumbs', {
 			modules: [Navigation, Pagination, Autoplay, Thumbs],
-			//effect: 'fade',
 			observer: true,
 			watchOverflow: true,
 			observeParents: true,
-			slidesPerView: 4,
+			slidesPerView: 3,
 			spaceBetween: 16,
 			parallax: true,
 			speed: 800,
-			//autoHeight: true,
-			//touchRatio: 0,
-			//simulateTouch: false,
-			//loop: true,
-			//preloadImages: false,
-			//lazy: true,
 
 			breakpoints: {
-				992: {
+				0: {
+					spaceBetween: 12,
+				},
+				768: {
 					slidesPerView: 3,
 					spaceBetween: 20,
 				},

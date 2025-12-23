@@ -3,7 +3,11 @@
 <main class="page page--tour-detail tour-detail --not-bg">
 	<nav class="tour-detail__nav tour-nav first-block--offset">
 		<div class="tour-nav__container">
-			<button data-fls-button class='tour-nav__button button-text --icon-long_back_arrow'>Back</button>
+			<include src="@components/custom/link/link.html" locals='{
+				"class": "tour-nav__link--back --icon-long_back_arrow",
+				"text": "Back",
+				"link": "javascript:history.back()"
+			}'></include>
 		</div>
 	</nav>
 	<section class="tour-detail__main-info tour-main-info">
@@ -55,10 +59,10 @@
 				</div>
 			</div>
 			<div class="tour-main-info__content">
-				<h1 data-fls-title class='tour-main-info__title title__primary'>Wine tasting In Tuscany</h1>
-				<div class="tour-main-info__coast">
+				<h1 data-fls-title data-fls-dynamic=".tour-main-info__container, 991.98, 0" class='tour-main-info__title title__primary'>Wine tasting In Tuscany</h1>
+				<div data-fls-title data-fls-dynamic=".tour-main-info__container, 991.98, 1" class="tour-main-info__coast">
 					<p>from</p>
-					<span class='--icon-euro'>34</span>
+					<span>34</span>
 				</div>
 				<div class="tour-main-info__description">
 					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
@@ -66,14 +70,14 @@
 				<form id='tour-form' class='tour-main-info__form tour-form' data-fls-form="dev" method="POST" action="php/sendmail" method="POST">
 					<div class="tour-form__field tour-form__field--date">
 						<span>Select a date</span>
-						<label class='datepicker-wrapper'>
+						<label data-datepicker-open class='datepicker-wrapper'>
 							<input data-fls-datepicker autocomplete="off" type="text" name="tour-form[date]" data-error="Chose date" placeholder='Date' class="datepicker">
 						</label>
 					</div>
 					<div class="tour-form__field tour-form__field--time">
 						<span>Time</span>
 						<select data-fls-select class='select--bg' name="tour-form[time]" data-error="Chose time">
-							<option value="" disabled selected hidden>Choose Time</option>
+							<option value="" disabled selected hidden>Select the time</option>
 							<option value="13:00">1:00 am</option>
 							<option value="14:00">2:00 am</option>
 							<option value="15:00">3:00 am</option>
@@ -81,9 +85,27 @@
 							<option value="17:00">5:00 am</option>
 						</select>
 					</div>
-					<button type="submit" class="button">Buy Now</button>
+					<button type="submit" class="tour-form__button button">Buy Now</button>
 				</form>
 			</div>
 		</div>
+	</section>
+	<section class="tour-detail__details details tour-detail--block">
+		<div class="details__container">
+			<h2 data-fls-title class='details__title title__secondary'>Details</h2>
+			<div class="details__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+			<ul class="details__list">
+				<li class="details__item --icon-people"><b>Number of group:</b> 15-30</li>
+				<li class="details__item --icon-duration"><b>Duration:</b> 15 hours and 45 minutes</li>
+				<li class="details__item --icon-location"><b>Departuring and arriving areas:</b> Lucca</li>
+				<li class="details__item --icon-guide"><b>Guide service:</b> Included</li>
+				<li class="details__item --icon-language"><b>Language:</b> English, Italian</li>
+				<li class="details__item --icon-ticket"><b>Entry Fees:</b> lorem ipsum</li>
+				<li class="details__item --icon-bus"><b>EntryTransportation:</b> Bus</li>
+			</ul>
+		</div>
+	</section>
+	<section class="tour-detail__comments-block tour-detail--block comments-block">
+		<include src="@components/custom/comments-block/comments-block.html"></include>
 	</section>
 </main>
